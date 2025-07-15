@@ -7,7 +7,8 @@
 
 @section('content')
     <div class="align-center flex w-full flex-col justify-center py-24 text-center md:h-screen md:min-h-[400px] md:py-0">
-        <canvas id="flowfield" class="absolute left-0 top-0 -z-0 h-full w-full"></canvas>
+        <canvas id="flowfield"
+            class="absolute left-0 top-0 -z-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
         <div class="z-10 space-y-4 md:space-y-8">
             <h3 class="text-sm uppercase tracking-widest text-slate-400"><x-gradient-text
                     class="from-slate-400 via-slate-300 to-slate-400">Fully Full-stack</x-gradient-text></h3>
@@ -298,5 +299,6 @@
         }
 
         animate();
+        canvas.classList.remove('opacity-0'); // Fade in the canvas after setup
     </script>
 @endpush

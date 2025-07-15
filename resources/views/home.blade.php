@@ -6,20 +6,21 @@
     Laravel and Vite.')
 
 @section('content')
-
-    @php
-        $words = ['Fullstack', 'Laravel', 'UX+UI', 'Animation', 'PHP', 'Svelte', 'CSS', 'HTML', 'Javascript', 'SQL'];
-    @endphp
-    <h1 class="text-center">Let's do <br>
-        <x-word-rotator :$words></x-word-rotator>
-    </h1>
-    <p>
-        This is a test page to ensure that the static site generation works correctly with Laravel and Vite.
-    </p>
-
-    <p>
-        Laravel is a modern PHP framework for
-        elegant syntax, powerful tools, and robust
-        features for rapid development.
-    </p>
+    <div class="align-center flex h-screen flex-col justify-center">
+        <h1 class="text-center text-9xl font-bold"><x-word-rotator :words="[
+            'Laravel',
+            'UX+UI',
+            'Animation',
+            'React',
+            'PHP',
+            'Svelte',
+            'CSS',
+            'Vue',
+            'Print',
+            'HTML',
+            'VanillaJS',
+            'SQL',
+        ]"></x-word-rotator>
+        </h1>
+    </div>
 @endsection

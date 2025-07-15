@@ -1,4 +1,4 @@
-@extends('_layouts.basic')
+@extends('_layouts.text')
 
 @section('meta_title', $title . ' - jasonpolito.github.io')
 @section('meta_description',

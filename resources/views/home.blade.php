@@ -6,23 +6,25 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center flex h-screen flex-col justify-center text-center">
-        <div class="space-y-8">
-            <h3 class="text-sm uppercase tracking-widest text-slate-400">The Definition of Full-stack</h3>
-            <h1 class="text-center text-9xl font-bold"><x-word-rotator :words="[
-                'UX+UI',
-                'Laravel',
-                'React',
-                'Tailwind',
-                'Animations',
-                'Vue',
-                'Svelte',
-                'PHP',
-                'Print Media',
-                'WordPress',
-                'Databases',
-            ]"></x-word-rotator>
+    <div class="align-center flex h-[33vh] min-h-[400px] flex-col justify-center text-center md:h-screen">
+        <div class="space-y-4 md:space-y-8">
+            <h3 class="text-sm uppercase tracking-widest text-slate-400">Fully Full-stack Yo</h3>
+            <h1 class="text-center text-6xl font-bold md:text-8xl lg:text-9xl"><x-word-rotator
+                    :words="[
+                        'UX+UI',
+                        'Laravel',
+                        'React',
+                        'Tailwind',
+                        'Animations',
+                        'Vue',
+                        'Svelte',
+                        'PHP',
+                        'Print Media',
+                        'WordPress',
+                        'Databases',
+                    ]"></x-word-rotator>
             </h1>
         </div>
     </div>
+    <div class="bg-{{ $baseColor }}-900 h-screen"></div>
 @endsection

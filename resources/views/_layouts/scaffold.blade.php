@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-white text-gray-800 antialiased dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-{{ $baseColor }}-950 text-{{ $baseColor }}-100 antialiased">
     @yield('page')
 </body>
 

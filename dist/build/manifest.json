@@ -1,8 +1,12 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-Dr6SOG4S.css",
+    "file": "assets/app-u0jXzgGz.css",
     "src": "resources/css/app.css",
     "isEntry": true
+  },
+  "resources/fonts/caprasimo-v6-latin-regular.woff2": {
+    "file": "assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2",
+    "src": "resources/fonts/caprasimo-v6-latin-regular.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-Bq_eVZke.js",

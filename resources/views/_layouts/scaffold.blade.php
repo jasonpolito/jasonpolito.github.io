@@ -10,9 +10,10 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+
 </head>
 
-<body class="bg-{{ $baseColor }}-950 text-{{ $baseColor }}-100 antialiased">
+<body class="bg-{{ $baseColor }}-950 text-{{ $baseColor }}-100 relative antialiased">
     @yield('page')
 </body>
 

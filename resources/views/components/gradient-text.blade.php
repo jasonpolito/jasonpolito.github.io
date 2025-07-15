@@ -1,4 +1,4 @@
 <span
-    {{ $attributes->merge(['class' => 'text-transparent bg-clip-text bg-linear-[-72deg] from-green-400 to-blue-500']) }}>
+    {{ $attributes->merge(['class' => 'text-transparent bg-clip-text bg-linear-[-72deg] from-amber-300 to-red-500']) }}>
     {{ $slot }}
 </span>

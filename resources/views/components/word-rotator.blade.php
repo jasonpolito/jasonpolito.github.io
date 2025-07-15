@@ -16,7 +16,7 @@
             </defs>
         </svg>
     </span>
-    <script>
+    <script type="module">
         const elts = {
             text1: document.querySelector("#{{ $id }} .text1"),
             text2: document.querySelector("#{{ $id }} .text2")

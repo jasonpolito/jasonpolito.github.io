@@ -8,6 +8,7 @@
     <title>@yield('meta_title', 'jasonpolito.github.io')</title>
     <meta name="description" content="@yield('meta_description', 'jasonpolito.github.io')">
 
+    @preloadFonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>

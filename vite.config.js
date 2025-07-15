@@ -48,7 +48,7 @@ export default defineConfig({
         replaceUrlsInDist({
             dir: "dist", // or 'public/build' for Laravel
             find: "http://localhost:8000",
-            replace: "https://jasonpolito.github.io/jasonpolito",
+            replace: "https://jasonpolito.github.io",
         }),
     ],
     css: {

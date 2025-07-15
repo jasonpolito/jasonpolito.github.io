@@ -18,6 +18,7 @@
             @yield('content')
         </x-prose>
     </x-section>
+    @stack('scripts')
 </body>
 
 </html>

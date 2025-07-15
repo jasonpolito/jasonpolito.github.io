@@ -6,7 +6,12 @@
     Laravel and Vite.')
 
 @section('content')
-    <h1 class="text-pretty">Jason <x-gradient-text>Polito</x-gradient-text></h1>
+    @php
+        $words = ['Create', 'Innovate', 'Inspire', 'Explore', 'Learn', 'Grow'];
+    @endphp
+    <h1>
+        Let's <x-word-rotator :$words></x-word-rotator>
+    </h1>
     <p>
         This is a test page to ensure that the static site generation works correctly with Laravel and Vite.
     </p>

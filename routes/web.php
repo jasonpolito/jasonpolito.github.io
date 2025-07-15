@@ -14,7 +14,7 @@ $routes = [
 ];
 
 Route::get('/', function () use ($routes) {
-    return view('template', [
+    return view('home', [
         'title' => 'Home',
         'routes' => $routes
     ]);

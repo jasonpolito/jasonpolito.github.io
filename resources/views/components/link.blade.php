@@ -20,7 +20,7 @@
 @endphp
 <a href="{{ $attributes->get('href') }}" {{ $attributes->except('href') }}
     {{ $attributes->has('blank') ? 'target="_blank"' : '' }}
-    {{ $attributes->merge(['class' => 'outline-none focus:animate-[pulse_1s_ease-in-out_infinite] inline-block no-underline group text-emerald-500 hover:text-emerald-600 transition']) }}>
+    {{ $attributes->merge(['class' => 'outline-none focus:brightness-[2] focus:animate-[pulse_1s_ease-in-out_infinite] inline-block no-underline group text-emerald-500 hover:text-emerald-600 transition']) }}>
     <x-gradient-text>{{ $slot }}</x-gradient-text>
     <span class="{{ $underlineClasses }}"></span>
 </a>

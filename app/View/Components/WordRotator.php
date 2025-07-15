@@ -10,6 +10,7 @@ class WordRotator extends Component
 {
     public array $words;
     public string $longest;
+    public string $id;
 
     /**
      * Create a new component instance.
@@ -17,6 +18,7 @@ class WordRotator extends Component
     public function __construct(array $words = ['Build', 'Together'])
     {
         $this->words = $words;
+        $this->id = uniqid('word-rotator-');
         $this->longest = array_reduce($this->words, function ($carry, $item) {
             return strlen($item) > strlen($carry) ? $item : $carry;
         }, '');

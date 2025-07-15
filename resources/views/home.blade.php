@@ -10,8 +10,8 @@
     @php
         $words = ['Fullstack', 'Laravel', 'UX+UI', 'Animation', 'PHP', 'Svelte', 'CSS', 'HTML', 'Javascript', 'SQL'];
     @endphp
-    <h1>
-        I can do <x-word-rotator :$words></x-word-rotator>
+    <h1 class="text-center">Let's do <br>
+        <x-word-rotator :$words></x-word-rotator>
     </h1>
     <p>
         This is a test page to ensure that the static site generation works correctly with Laravel and Vite.

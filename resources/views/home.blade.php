@@ -8,18 +8,17 @@
 @section('content')
     <div class="align-center flex h-screen flex-col justify-center">
         <h1 class="text-center text-9xl font-bold"><x-word-rotator :words="[
-            'Laravel',
             'UX+UI',
-            'Animation',
+            'Laravel',
             'React',
-            'PHP',
-            'Svelte',
-            'CSS',
+            'Tailwind',
+            'Animations',
             'Vue',
-            'Print',
-            'HTML',
-            'VanillaJS',
-            'SQL',
+            'Svelte',
+            'PHP',
+            'Print Media',
+            'WordPress',
+            'Databases',
         ]"></x-word-rotator>
         </h1>
     </div>

@@ -29,3 +29,16 @@
     </div>
     <div class="bg-{{ $baseColor }}-900 relative z-10 h-screen"></div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('assets/js/ldbx.js') }}"></script>
+    <script>
+        const UserModel = new LDBX('users')
+        let data = {
+            name: "John",
+            age: 21
+        }
+
+        UserModel.save(data)
+    </script>
+@endpush

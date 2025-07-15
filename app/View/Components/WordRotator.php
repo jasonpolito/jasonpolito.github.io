@@ -19,9 +19,7 @@ class WordRotator extends Component
     {
         $this->words = $words;
         $this->id = uniqid('word-rotator-');
-        $this->longest = array_reduce($this->words, function ($carry, $item) {
-            return strlen($item) > strlen($carry) ? $item : $carry;
-        }, '');
+        $this->longest = array_reduce($this->words, fn($carry, $item) => strlen($item) > strlen($carry) ? $item : $carry, '');
     }
 
     /**

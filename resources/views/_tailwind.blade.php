@@ -1,1 +1,6 @@
-<div class="bg-slate-950"></div>
+@php
+    $catchAll = [
+        'bg-slate-950', //
+        'bg-slate-900',
+    ];
+@endphp

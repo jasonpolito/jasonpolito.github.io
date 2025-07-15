@@ -7,7 +7,7 @@ $routes = [
 ];
 
 $routes = [
-    'about',
+    'howdy',
     'projects',
     'contact',
     'resume',

@@ -9,21 +9,39 @@
     <meta name="description" content="Welcome to the home page of jasonpolito.github.io. This is a static site generated with
     Laravel and Vite.">
 
-    <link rel='preload' href='https://jasonpolito.github.io/build/assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2' as='font' type='font/woff2' crossorigin>    <link rel="preload" as="style" href="https://jasonpolito.github.io/build/assets/app-Cxm--ZFu.css" /><link rel="modulepreload" href="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js" /><link rel="stylesheet" href="https://jasonpolito.github.io/build/assets/app-Cxm--ZFu.css" /><script type="module" src="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js"></script>
+    <link rel='preload' href='https://jasonpolito.github.io/build/assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2' as='font' type='font/woff2' crossorigin>
+<link rel='preload' href='https://jasonpolito.github.io/build/assets/fira-code-v26-latin-600-yavC5oj2.woff2' as='font' type='font/woff2' crossorigin>
+<link rel='preload' href='https://jasonpolito.github.io/build/assets/fira-code-v26-latin-700-7Dlp22fA.woff2' as='font' type='font/woff2' crossorigin>
+<link rel='preload' href='https://jasonpolito.github.io/build/assets/fira-code-v26-latin-regular-6WyMkEaV.woff2' as='font' type='font/woff2' crossorigin>    <link rel="preload" as="style" href="https://jasonpolito.github.io/build/assets/app-nSznGsw4.css" /><link rel="modulepreload" href="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js" /><link rel="stylesheet" href="https://jasonpolito.github.io/build/assets/app-nSznGsw4.css" /><script type="module" src="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js"></script>
 </head>
 
 <body class="bg-slate-950 text-slate-100 relative antialiased">
-            <div class="align-center relative z-10 flex w-full flex-col justify-center bg-slate-950 py-32 text-center"
+            <div class="align-center relative z-10 flex h-screen w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
         id="fullystacked">
         <canvas id="flowfield"
             class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
+        <style>
+            @keyframes color-spin {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+            .color-spin {
+                animation: color-spin 5s linear infinite;
+            }
+        </style>
         <div class="z-10 space-y-4 md:space-y-8">
-            <h3 class="text-sm uppercase leading-relaxed tracking-widest text-slate-400"><span class="text-transparent bg-clip-text bg-linear-[-72deg]  from-slate-400 via-slate-300 to-slate-400">
+            <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><span class="text-transparent bg-clip-text bg-linear-[-72deg]  from-slate-400 via-slate-300 to-slate-400">
     Jason Polito<br>Full-stack
                     Developer & Designer
 </span>
 </h3>
-            <h1 class="font-display text-center text-5xl md:text-8xl lg:text-9xl"><span class="relative">
+            <h1 class="font-display color-spin text-center text-5xl sm:text-8xl lg:text-9xl"><span class="relative">
     <span class="invisible">Performance</span>
     <span class="absolute inset-x-0 text-center [filter:url(#threshold)]" data-word-rotator="[&quot;UX+UI&quot;,&quot;Laravel&quot;,&quot;React&quot;,&quot;PHP&quot;,&quot;Tailwind&quot;,&quot;Svelte&quot;,&quot;Node&quot;,&quot;Vue&quot;,&quot;Animations&quot;,&quot;WordPress&quot;,&quot;Performance&quot;,&quot;Print Media&quot;,&quot;Databases&quot;]">
         <span class="text-transparent bg-clip-text bg-linear-[-72deg] from-amber-500 to-red-500 text1 absolute inset-x-0 block">

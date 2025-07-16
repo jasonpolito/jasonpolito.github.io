@@ -6,15 +6,30 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center relative z-10 flex w-full flex-col justify-center bg-slate-950 py-32 text-center"
+    <div class="align-center relative z-10 flex h-screen w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
         id="fullystacked">
         <canvas id="flowfield"
             class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
+        <style>
+            @keyframes color-spin {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+
+            .color-spin {
+                animation: color-spin 5s linear infinite;
+            }
+        </style>
         <div class="z-10 space-y-4 md:space-y-8">
-            <h3 class="text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
+            <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
                     class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
                     Developer & Designer</x-gradient-text></h3>
-            <h1 class="font-display text-center text-5xl md:text-8xl lg:text-9xl"><x-word-rotator
+            <h1 class="font-display color-spin text-center text-5xl sm:text-8xl lg:text-9xl"><x-word-rotator
                     :words="[
                         'UX+UI',
                         'Laravel',

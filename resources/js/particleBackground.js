@@ -5,6 +5,9 @@ function isMobile() {
 }
 
 function buildParticleBackground() {
+    if (isMobile()) {
+        return; // Skip on mobile devices
+    }
     const canvas = document.getElementById("flowfield");
     const canvasParent = document.getElementById("fullystacked");
     const ctx = canvas.getContext("2d");
@@ -285,6 +288,4 @@ function buildParticleBackground() {
     }, 100);
 }
 
-if (!isMobile()) {
-    buildParticleBackground();
-}
+window.addEventListener("resize", buildParticleBackground);

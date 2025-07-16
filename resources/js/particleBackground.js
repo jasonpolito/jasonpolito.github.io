@@ -20,13 +20,13 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = 1000;
+    const numParticles = 2000;
     const particles = [];
     const emittedParticles = [];
 
     let mouse = { x: null, y: null };
     let lastEmissionTime = 0;
-    const EMIT_INTERVAL = 1000 / 6; // 6 per second
+    const EMIT_INTERVAL = 1000 / 3; // 3 per second
 
     function resizeCanvas() {
         width = canvasParent.clientWidth;
@@ -204,6 +204,17 @@ function buildParticleBackground() {
                 const angle = field[index];
                 this.vx += Math.cos(angle) * 0.1;
                 this.vy += Math.sin(angle) * 0.1;
+            }
+
+            if (mouse.x !== null && mouse.y !== null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 100) {
+                    const strength = (1 - dist / 100) * 0.5; // stronger pull closer to center
+                    this.vx += dx * strength * 0.01;
+                    this.vy += dy * strength * 0.01;
+                }
             }
 
             this.vx *= 0.9;

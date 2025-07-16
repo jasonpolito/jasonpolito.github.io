@@ -6,15 +6,14 @@
         'React',
         'Tailwind',
         'Animation',
-        'Automation',
-        'Interaction',
         'Svelte',
         'PHP',
         'Node',
         'WordPress',
+        'Databases',
         'Performance',
         'Print Media',
-        'Databases',
+        'Logos',
     ];
 @endphp
 

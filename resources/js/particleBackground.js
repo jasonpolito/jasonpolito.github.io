@@ -26,7 +26,7 @@ function buildParticleBackground() {
 
     let mouse = { x: null, y: null };
     let lastEmissionTime = 0;
-    const EMIT_INTERVAL = 1000 / 3; // 3 per second
+    const EMIT_INTERVAL = 1000 / 6; // 3 per second
 
     function resizeCanvas() {
         width = canvasParent.clientWidth;
@@ -196,6 +196,12 @@ function buildParticleBackground() {
         }
 
         update() {
+            if (this.x > width || this.x < 0 || this.y > height || this.y < 0) {
+                particles.splice(particles.indexOf(this), 1);
+                particles.push(new Particle());
+                delete this;
+                return;
+            }
             const col = Math.floor(this.x / fieldSpacing);
             const row = Math.floor(this.y / fieldSpacing);
             const index = row * cols + col;

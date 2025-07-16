@@ -37,11 +37,11 @@
             </h1>
         </div>
     </div>
-    <div class="py-32 font-mono">
+    {{-- <div class="py-32 font-mono">
         <ul>
             @foreach ($skills as $skill)
                 <li class="text-slate-400">{{ $skill }}</li>
             @endforeach
         </ul>
-    </div>
+    </div> --}}
 @endsection

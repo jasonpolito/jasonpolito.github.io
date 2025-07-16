@@ -28,7 +28,7 @@
     <div class="align-center h-screen-fallback relative z-10 flex max-h-[720px] w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
         id="fullystacked">
         <canvas id="flowfield"
-            class="mask-b-from-25% absolute left-0 top-0 hidden h-full w-full opacity-0 transition-all duration-[2s] sm:block"></canvas>
+            class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[2s]"></canvas>
         <div class="pointer-events-none space-y-4 md:space-y-8">
             <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
                     class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack

@@ -20,7 +20,7 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = 2000;
+    const numParticles = isMobile() ? 500 : 2000;
     const particles = [];
     const emittedParticles = [];
 
@@ -332,6 +332,6 @@ function buildParticleBackground() {
     }, 100);
 }
 
-if (!isMobile()) buildParticleBackground();
+// if (!isMobile()) buildParticleBackground();
 
 window.addEventListener("resize", buildParticleBackground);

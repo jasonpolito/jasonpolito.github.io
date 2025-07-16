@@ -305,6 +305,8 @@
         }
 
         animate();
-        canvas.classList.remove('opacity-0'); // Fade in the canvas after setup
+        setTimeout(() => {
+            canvas.classList.remove('opacity-0'); // Fade in the canvas after setup
+        }, 100);
     </script>
 @endpush

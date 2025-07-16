@@ -13,7 +13,14 @@
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
     --font-display: "Caprasimo", display, serif;
-    --font-mono: "Syne Mono", monospace;
+    --font-mono: "Courier Prime", monospace;
+}
+
+@layer utilities {
+    .h-screen-fallback {
+        height: 100vh;
+        height: 100dvh;
+    }
 }
 
 @keyframes color-spin {

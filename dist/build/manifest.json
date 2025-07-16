@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-Cd-g2WRf.css",
+    "file": "assets/app-BgG-FweV.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -41,7 +41,7 @@
     "src": "resources/fonts/syne-mono-v15-latin-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BoAKBFhf.js",
+    "file": "assets/app-DKH1gMgp.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

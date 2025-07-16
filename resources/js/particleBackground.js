@@ -5,7 +5,7 @@ function isMobile() {
 }
 
 function buildParticleBackground() {
-    if (isMobile()) return;
+    // if (isMobile()) return;
 
     const canvas = document.getElementById("flowfield");
     const canvasParent = document.getElementById("fullystacked");

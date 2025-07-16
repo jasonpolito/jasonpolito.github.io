@@ -20,7 +20,7 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = isMobile() ? 250 : 2000;
+    const numParticles = isMobile() ? 100 : 2000;
     const particles = [];
     const emittedParticles = [];
 

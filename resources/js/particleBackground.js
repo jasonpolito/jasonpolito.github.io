@@ -25,7 +25,6 @@ function buildParticleBackground() {
 
     // Resize
     function resizeCanvas() {
-        console.log(canvasParent.clientHeight, canvasParent.clientWidth);
         width = canvasParent.clientWidth;
         height = canvasParent.clientHeight;
         canvas.width = width;

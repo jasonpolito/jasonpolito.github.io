@@ -32,7 +32,7 @@
             <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
                     class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
                     Developer & Designer</x-gradient-text></h3>
-            <h1 class="font-display color-spin text-center text-5xl sm:text-8xl lg:text-9xl"><x-word-rotator
+            <h1 class="font-display text-center text-5xl sm:text-8xl lg:text-9xl"><x-word-rotator
                     :words="$skills"></x-word-rotator>
             </h1>
         </div>

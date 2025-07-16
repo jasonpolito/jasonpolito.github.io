@@ -5,8 +5,6 @@ function isMobile() {
 }
 
 function buildParticleBackground() {
-    // if (isMobile()) return;
-
     const canvas = document.getElementById("flowfield");
     const canvasParent = document.getElementById("fullystacked");
     const ctx = canvas.getContext("2d");
@@ -20,13 +18,42 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = isMobile() ? 100 : 2000;
+    const isMobileDevice = isMobile();
+    const numParticles = isMobileDevice ? 500 : 1000;
     const particles = [];
     const emittedParticles = [];
 
     let mouse = { x: null, y: null };
-    let lastEmissionTime = 0;
-    const EMIT_INTERVAL = 1000 / 3; // 3 per second
+    let lastBurstTime = 0;
+
+    class EmittedParticle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.vx = (Math.random() - 0.5) * 2;
+            this.vy = (Math.random() - 0.5) * 2;
+            this.life = 1.0;
+            this.startTime = performance.now();
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.life = 1 - (performance.now() - this.startTime) / 3000;
+        }
+
+        draw(ctx) {
+            if (this.life <= 0) return;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.life})`;
+            ctx.fill();
+        }
+
+        isAlive() {
+            return this.life > 0;
+        }
+    }
 
     function resizeCanvas() {
         width = canvasParent.clientWidth;
@@ -45,6 +72,18 @@ function buildParticleBackground() {
         const rect = canvas.getBoundingClientRect();
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
+
+        if (isMobileDevice) {
+            const now = performance.now();
+            if (now - lastBurstTime > 100) {
+                for (let i = 0; i < 8; i++) {
+                    emittedParticles.push(
+                        new EmittedParticle(mouse.x, mouse.y)
+                    );
+                }
+                lastBurstTime = now;
+            }
+        }
     });
 
     class SimplexNoise {
@@ -170,134 +209,6 @@ function buildParticleBackground() {
 
     const simplex = new SimplexNoise();
 
-    function generateFlowField() {
-        let index = 0;
-        for (let y = 0; y < rows; y++) {
-            for (let x = 0; x < cols; x++) {
-                const angle =
-                    simplex.noise(x * 0.1, y * 0.1, zOffset) * Math.PI * 2;
-                field[index++] = angle;
-            }
-        }
-    }
-
-    class Particle {
-        constructor() {
-            this.reset();
-        }
-
-        reset() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.vx = 0;
-            this.vy = 0;
-            this.speed = 1;
-            this.history = [];
-        }
-
-        update() {
-            const col = Math.floor(this.x / fieldSpacing);
-            const row = Math.floor(this.y / fieldSpacing);
-            const index = row * cols + col;
-
-            if (field[index] !== undefined) {
-                const angle = field[index];
-                this.vx += Math.cos(angle) * 0.1;
-                this.vy += Math.sin(angle) * 0.1;
-            }
-
-            if (mouse.x !== null && mouse.y !== null) {
-                const dx = mouse.x - this.x;
-                const dy = mouse.y - this.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 100) {
-                    const strength = (1 - dist / 100) * 0.5; // stronger pull closer to center
-                    this.vx += dx * strength * 0.01;
-                    this.vy += dy * strength * 0.01;
-                }
-            }
-
-            this.vx *= 0.9;
-            this.vy *= 0.9;
-            this.x += this.vx;
-            this.y += this.vy;
-
-            this.history.push([this.x, this.y]);
-            if (this.history.length > 5) this.history.shift();
-
-            if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
-                this.reset();
-            }
-
-            if (mouse.x !== null && mouse.y !== null) {
-                const now = Date.now();
-                const dx = this.x - mouse.x;
-                const dy = this.y - mouse.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 50 && now - lastEmissionTime > EMIT_INTERVAL) {
-                    emittedParticles.push(new EmittedParticle(this.x, this.y));
-                    lastEmissionTime = now;
-                }
-            }
-        }
-
-        draw(ctx) {
-            if (this.history.length < 2) return;
-            ctx.beginPath();
-            ctx.moveTo(this.history[0][0], this.history[0][1]);
-            for (let i = 1; i < this.history.length; i++) {
-                ctx.lineTo(this.history[i][0], this.history[i][1]);
-            }
-
-            let baseColor = [188, 58, 160];
-            let alpha = 0.2;
-
-            if (mouse.x !== null && mouse.y !== null) {
-                let dx = this.x - mouse.x;
-                let dy = this.y - mouse.y;
-                let dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 200) {
-                    let t = 1 - dist / 200;
-                    baseColor = baseColor.map((c) =>
-                        Math.min(255, c + t * (255 - c))
-                    );
-                }
-            }
-
-            ctx.strokeStyle = `rgba(${baseColor[0]}, ${baseColor[1]}, ${baseColor[2]}, ${alpha})`;
-            ctx.lineWidth = isMobile() ? 3 : 1;
-            ctx.stroke();
-        }
-    }
-
-    class EmittedParticle {
-        constructor(x, y) {
-            this.x = x;
-            this.y = y;
-            this.vx = (Math.random() - 0.5) * 1.5;
-            this.vy = (Math.random() - 0.5) * 1.5;
-            this.life = 60;
-        }
-
-        update() {
-            this.x += this.vx;
-            this.y += this.vy;
-            this.life--;
-        }
-
-        draw(ctx) {
-            const alpha = this.life / 60;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, 1, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.fill();
-        }
-
-        isAlive() {
-            return this.life > 0;
-        }
-    }
-
     for (let i = 0; i < numParticles; i++) {
         particles.push(new Particle());
     }
@@ -311,10 +222,24 @@ function buildParticleBackground() {
         zOffset += 0.003;
         generateFlowField();
 
-        particles.forEach((p) => {
+        const qt = new Quadtree({ x: 0, y: 0, width, height }, 4);
+        for (const p of particles) qt.insert(p);
+
+        let nearby = [];
+        if (mouse.x !== null && mouse.y !== null) {
+            nearby = qt.query({
+                x: mouse.x - 300,
+                y: mouse.y - 300,
+                width: 600,
+                height: 600,
+            });
+        }
+
+        for (const p of particles) {
+            p._nearMouse = nearby.includes(p);
             p.update();
             p.draw(ctx);
-        });
+        }
 
         for (let i = emittedParticles.length - 1; i >= 0; i--) {
             const ep = emittedParticles[i];
@@ -327,11 +252,8 @@ function buildParticleBackground() {
     }
 
     animate();
-    setTimeout(() => {
-        canvas.classList.remove("opacity-0");
-    }, 100);
+    setTimeout(() => canvas.classList.remove("opacity-0"), 100);
 }
 
-// if (!isMobile()) buildParticleBackground();
 buildParticleBackground();
 window.addEventListener("resize", buildParticleBackground);

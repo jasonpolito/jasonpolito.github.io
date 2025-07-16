@@ -1,3 +1,21 @@
+@php
+    $skills = [
+        'UX+UI',
+        'Laravel',
+        'React',
+        'PHP',
+        'Tailwind',
+        'Svelte',
+        'Node',
+        'Vue',
+        'Animations',
+        'WordPress',
+        'Performance',
+        'Print Media',
+        'Databases',
+    ];
+@endphp
+
 @extends('_layouts.basic')
 
 @section('meta_title', 'Home Page - jasonpolito.github.io')
@@ -30,25 +48,17 @@
                     class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
                     Developer & Designer</x-gradient-text></h3>
             <h1 class="font-display color-spin text-center text-5xl sm:text-8xl lg:text-9xl"><x-word-rotator
-                    :words="[
-                        'UX+UI',
-                        'Laravel',
-                        'React',
-                        'PHP',
-                        'Tailwind',
-                        'Svelte',
-                        'Node',
-                        'Vue',
-                        'Animations',
-                        'WordPress',
-                        'Performance',
-                        'Print Media',
-                        'Databases',
-                    ]"></x-word-rotator>
+                    :words="$skills"></x-word-rotator>
             </h1>
         </div>
     </div>
-
+    <div class="py-32 font-mono">
+        <ul>
+            @foreach ($skills as $skill)
+                <li class="text-slate-400">{{ $skill }}</li>
+            @endforeach
+        </ul>
+    </div>
 @endsection
 
 @push('scripts')

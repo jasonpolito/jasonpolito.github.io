@@ -1,5 +1,13 @@
 @font-face {
   font-display: swap;
+  font-family: 'Syne Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/syne-mono-v15-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
   font-family: 'Fira Code';
   font-style: normal;
   font-weight: 600;

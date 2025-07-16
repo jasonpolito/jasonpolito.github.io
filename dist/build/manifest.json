@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-nSznGsw4.css",
+    "file": "assets/app-Cb2PnQ-d.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -19,6 +19,10 @@
   "resources/fonts/fira-code-v26-latin-regular.woff2": {
     "file": "assets/fira-code-v26-latin-regular-6WyMkEaV.woff2",
     "src": "resources/fonts/fira-code-v26-latin-regular.woff2"
+  },
+  "resources/fonts/syne-mono-v15-latin-regular.woff2": {
+    "file": "assets/syne-mono-v15-latin-regular-BVIxfnxz.woff2",
+    "src": "resources/fonts/syne-mono-v15-latin-regular.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-Bq_eVZke.js",

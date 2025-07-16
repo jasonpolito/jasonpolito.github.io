@@ -9,21 +9,23 @@
     <meta name="description" content="Welcome to the home page of jasonpolito.github.io. This is a static site generated with
     Laravel and Vite.">
 
-    <link rel='preload' href='https://jasonpolito.github.io/build/assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2' as='font' type='font/woff2' crossorigin>    <link rel="preload" as="style" href="https://jasonpolito.github.io/build/assets/app-Bqf-yXSH.css" /><link rel="modulepreload" href="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js" /><link rel="stylesheet" href="https://jasonpolito.github.io/build/assets/app-Bqf-yXSH.css" /><script type="module" src="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js"></script>
+    <link rel='preload' href='https://jasonpolito.github.io/build/assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2' as='font' type='font/woff2' crossorigin>    <link rel="preload" as="style" href="https://jasonpolito.github.io/build/assets/app-DX8dOviO.css" /><link rel="modulepreload" href="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js" /><link rel="stylesheet" href="https://jasonpolito.github.io/build/assets/app-DX8dOviO.css" /><script type="module" src="https://jasonpolito.github.io/build/assets/app-Bq_eVZke.js"></script>
 </head>
 
 <body class="bg-slate-950 text-slate-100 relative antialiased">
-            <div class="align-center flex w-full flex-col justify-center py-24 text-center md:h-screen md:min-h-[400px] md:py-0">
+            <div class="align-center relative z-10 flex w-full flex-col justify-center bg-slate-950 py-32 text-center"
+        id="fullystacked">
         <canvas id="flowfield"
-            class="mask-b-from-25% absolute left-0 top-0 -z-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
+            class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
         <div class="z-10 space-y-4 md:space-y-8">
-            <h3 class="text-sm uppercase tracking-widest text-slate-400"><span class="text-transparent bg-clip-text bg-linear-[-72deg]  from-slate-400 via-slate-300 to-slate-400">
-    Fully Full-stack
+            <h3 class="text-sm uppercase leading-relaxed tracking-widest text-slate-400"><span class="text-transparent bg-clip-text bg-linear-[-72deg]  from-slate-400 via-slate-300 to-slate-400">
+    Jason Polito<br>Full-stack
+                    Developer & Designer
 </span>
 </h3>
             <h1 class="font-display text-center text-5xl md:text-8xl lg:text-9xl"><span class="relative">
     <span class="invisible">Performance</span>
-    <span class="absolute inset-x-0 text-center [filter:url(#threshold)]" data-word-rotator="[&quot;UX+UI&quot;,&quot;Laravel&quot;,&quot;React&quot;,&quot;PHP&quot;,&quot;Tailwind&quot;,&quot;Svelte&quot;,&quot;Vue&quot;,&quot;Animations&quot;,&quot;WordPress&quot;,&quot;Performance&quot;,&quot;Print Media&quot;,&quot;Databases&quot;]">
+    <span class="absolute inset-x-0 text-center [filter:url(#threshold)]" data-word-rotator="[&quot;UX+UI&quot;,&quot;Laravel&quot;,&quot;React&quot;,&quot;PHP&quot;,&quot;Tailwind&quot;,&quot;Svelte&quot;,&quot;Node&quot;,&quot;Vue&quot;,&quot;Animations&quot;,&quot;WordPress&quot;,&quot;Performance&quot;,&quot;Print Media&quot;,&quot;Databases&quot;]">
         <span class="text-transparent bg-clip-text bg-linear-[-72deg] from-amber-500 to-red-500 text1 absolute inset-x-0 block">
     UX+UI
 </span>
@@ -44,12 +46,14 @@
             </h1>
         </div>
     </div>
+
         <script>
         const canvas = document.getElementById("flowfield");
+        const canvasParent = document.getElementById("fullystacked");
         const ctx = canvas.getContext("2d");
 
-        let width = window.innerWidth;
-        let height = window.innerHeight;
+        let width = canvasParent.clientWidth;
+        let height = canvasParent.clientHeight;
         canvas.width = width;
         canvas.height = height;
 
@@ -64,8 +68,9 @@
 
         // Resize
         function resizeCanvas() {
-            width = window.innerWidth;
-            height = window.innerHeight;
+            console.log(canvasParent.clientHeight, canvasParent.clientWidth);
+            width = canvasParent.clientWidth;
+            height = canvasParent.clientHeight;
             canvas.width = width;
             canvas.height = height;
 

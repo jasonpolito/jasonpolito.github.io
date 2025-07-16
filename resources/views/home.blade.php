@@ -6,12 +6,14 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center flex w-full flex-col justify-center py-24 text-center md:h-screen md:min-h-[400px] md:py-0">
+    <div class="align-center relative z-10 flex w-full flex-col justify-center bg-slate-950 py-32 text-center"
+        id="fullystacked">
         <canvas id="flowfield"
-            class="mask-b-from-25% absolute left-0 top-0 -z-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
+            class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[5s]"></canvas>
         <div class="z-10 space-y-4 md:space-y-8">
-            <h3 class="text-sm uppercase tracking-widest text-slate-400"><x-gradient-text
-                    class="from-slate-400 via-slate-300 to-slate-400">Fully Full-stack</x-gradient-text></h3>
+            <h3 class="text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
+                    class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
+                    Developer & Designer</x-gradient-text></h3>
             <h1 class="font-display text-center text-5xl md:text-8xl lg:text-9xl"><x-word-rotator
                     :words="[
                         'UX+UI',
@@ -20,6 +22,7 @@
                         'PHP',
                         'Tailwind',
                         'Svelte',
+                        'Node',
                         'Vue',
                         'Animations',
                         'WordPress',
@@ -30,15 +33,17 @@
             </h1>
         </div>
     </div>
+
 @endsection
 
 @push('scripts')
     <script>
         const canvas = document.getElementById("flowfield");
+        const canvasParent = document.getElementById("fullystacked");
         const ctx = canvas.getContext("2d");
 
-        let width = window.innerWidth;
-        let height = window.innerHeight;
+        let width = canvasParent.clientWidth;
+        let height = canvasParent.clientHeight;
         canvas.width = width;
         canvas.height = height;
 
@@ -53,8 +58,9 @@
 
         // Resize
         function resizeCanvas() {
-            width = window.innerWidth;
-            height = window.innerHeight;
+            console.log(canvasParent.clientHeight, canvasParent.clientWidth);
+            width = canvasParent.clientWidth;
+            height = canvasParent.clientHeight;
             canvas.width = width;
             canvas.height = height;
 

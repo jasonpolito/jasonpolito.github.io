@@ -2,13 +2,15 @@
     $skills = [
         'UX+UI',
         'Laravel',
-        'React',
-        'PHP',
-        'Tailwind',
-        'Svelte',
-        'Node',
         'Vue',
-        'Animations',
+        'React',
+        'Tailwind',
+        'Animation',
+        'Automation',
+        'Interaction',
+        'Svelte',
+        'PHP',
+        'Node',
         'WordPress',
         'Performance',
         'Print Media',
@@ -16,7 +18,7 @@
     ];
 @endphp
 
-@extends('_layouts.basic')
+@extends('_layouts.main')
 
 @section('meta_title', 'Home Page - jasonpolito.github.io')
 @section('meta_description',
@@ -24,11 +26,11 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center h-screen-fallback relative z-10 flex w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
+    <div class="align-center h-screen-fallback relative z-10 flex max-h-[720px] w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
         id="fullystacked">
         <canvas id="flowfield"
             class="mask-b-from-25% absolute left-0 top-0 hidden h-full w-full opacity-0 transition-all duration-[2s] sm:block"></canvas>
-        <div class="z-10 space-y-4 md:space-y-8">
+        <div class="pointer-events-none space-y-4 md:space-y-8">
             <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
                     class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
                     Developer & Designer</x-gradient-text></h3>

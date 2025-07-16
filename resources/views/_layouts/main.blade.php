@@ -1,3 +1,8 @@
+@php
+    // bg-slate-950
+    // bg-slate-900
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +15,14 @@
     <meta name="description" content="@yield('meta_description', 'jasonpolito.github.io')">
 
     @preloadFonts
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
 <body class="bg-{{ $baseColor }}-950 text-{{ $baseColor }}-100 relative antialiased">
-    @yield('page')
+    @yield('content')
+    @stack('script')
 </body>
 
 </html>

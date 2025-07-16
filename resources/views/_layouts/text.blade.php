@@ -1,9 +1,0 @@
-@extends('_layouts.scaffold')
-@section('page')
-    <x-section>
-        <x-prose>
-            @yield('content')
-        </x-prose>
-    </x-section>
-    @stack('scripts')
-@endsection

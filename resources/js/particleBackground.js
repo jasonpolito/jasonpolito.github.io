@@ -20,10 +20,13 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = 2000;
+    const numParticles = 1000;
     const particles = [];
+    const emittedParticles = [];
 
     let mouse = { x: null, y: null };
+    let lastEmissionTime = 0;
+    const EMIT_INTERVAL = 1000 / 6; // 6 per second
 
     function resizeCanvas() {
         width = canvasParent.clientWidth;
@@ -189,7 +192,6 @@ function buildParticleBackground() {
             this.vx = 0;
             this.vy = 0;
             this.speed = 1;
-            this.radius = 1;
             this.history = [];
         }
 
@@ -215,6 +217,17 @@ function buildParticleBackground() {
             if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
                 this.reset();
             }
+
+            if (mouse.x !== null && mouse.y !== null) {
+                const now = Date.now();
+                const dx = this.x - mouse.x;
+                const dy = this.y - mouse.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 50 && now - lastEmissionTime > EMIT_INTERVAL) {
+                    emittedParticles.push(new EmittedParticle(this.x, this.y));
+                    lastEmissionTime = now;
+                }
+            }
         }
 
         draw(ctx) {
@@ -225,7 +238,6 @@ function buildParticleBackground() {
                 ctx.lineTo(this.history[i][0], this.history[i][1]);
             }
 
-            let baseSize = 1;
             let baseColor = [188, 58, 160];
             let alpha = 0.2;
 
@@ -235,7 +247,6 @@ function buildParticleBackground() {
                 let dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < 200) {
                     let t = 1 - dist / 200;
-                    baseSize = t * 5 + 1;
                     baseColor = baseColor.map((c) =>
                         Math.min(255, c + t * (255 - c))
                     );
@@ -243,8 +254,36 @@ function buildParticleBackground() {
             }
 
             ctx.strokeStyle = `rgba(${baseColor[0]}, ${baseColor[1]}, ${baseColor[2]}, ${alpha})`;
-            ctx.lineWidth = baseSize;
+            ctx.lineWidth = 1;
             ctx.stroke();
+        }
+    }
+
+    class EmittedParticle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
+            this.life = 60;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.life--;
+        }
+
+        draw(ctx) {
+            const alpha = this.life / 60;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 1, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.fill();
+        }
+
+        isAlive() {
+            return this.life > 0;
         }
     }
 
@@ -265,6 +304,13 @@ function buildParticleBackground() {
             p.update();
             p.draw(ctx);
         });
+
+        for (let i = emittedParticles.length - 1; i >= 0; i--) {
+            const ep = emittedParticles[i];
+            ep.update();
+            ep.draw(ctx);
+            if (!ep.isAlive()) emittedParticles.splice(i, 1);
+        }
 
         requestAnimationFrame(animate);
     }

@@ -24,7 +24,7 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center relative z-10 flex h-screen w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
+    <div class="align-center relative z-10 flex h-dvh w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
         id="fullystacked">
         <canvas id="flowfield"
             class="mask-b-from-25% absolute left-0 top-0 hidden h-full w-full opacity-0 transition-all duration-[2s] sm:block"></canvas>

@@ -20,7 +20,7 @@ function buildParticleBackground() {
     let cols, rows, field;
     let zOffset = 0;
 
-    const numParticles = isMobile() ? 500 : 2000;
+    const numParticles = isMobile() ? 250 : 2000;
     const particles = [];
     const emittedParticles = [];
 
@@ -265,7 +265,7 @@ function buildParticleBackground() {
             }
 
             ctx.strokeStyle = `rgba(${baseColor[0]}, ${baseColor[1]}, ${baseColor[2]}, ${alpha})`;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = isMobile() ? 3 : 1;
             ctx.stroke();
         }
     }
@@ -333,5 +333,5 @@ function buildParticleBackground() {
 }
 
 // if (!isMobile()) buildParticleBackground();
-
+buildParticleBackground();
 window.addEventListener("resize", buildParticleBackground);

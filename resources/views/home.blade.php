@@ -39,7 +39,7 @@
                     </div>
                     <h3 class="bg-{{ $ink }} relative my-3 block w-full rounded-md px-2 py-[0.25rem] sm:px-4">
                         <div class="relative left-1 sm:left-[1rem]">
-                            <div class="fitty text-{{ $paper }} tracking-[0.5em] sm:tracking-[1em]">
+                            <div class="fitty tracking-[0.5em] text-white sm:tracking-[1em]">
                                 Full-Stack
                             </div>
                         </div>

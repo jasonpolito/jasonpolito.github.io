@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
          * text-amber-100
          * dark:text-amber-100
          */
-        View::share('baseColor', 'amber-100');
-        View::share('textColor', 'cyan-950');
+        // View::share('baseColor', 'amber-100');
+        // View::share('textColor', 'cyan-950');
     }
 }

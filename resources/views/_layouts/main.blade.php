@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="bg-{{ $baseColor }} dark:bg-{{ $textColor }} relative antialiased">
+<body class="relative bg-amber-100 antialiased">
     @yield('content')
     @stack('script')
 </body>

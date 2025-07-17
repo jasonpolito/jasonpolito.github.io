@@ -27,12 +27,10 @@
 @section('content')
     <x-container class="font-display text-{{ $ink }} max-w-3xl uppercase">
         <div class="text-eme">@include('_partials.intro')</div>
-        <div class="text-cyan-950">
-            <x-card>
-                <div class="-my-2">
-                    <h4 class="fitty tracking-widest">15+ Years of Experience</h4>
-                </div>
-            </x-card>
-        </div>
+        <x-card class="text-transparent">
+            <div class="text-{{ $ink }} -mt-6 sm:-mt-8 lg:-mt-12">
+                <h4 class="fitty tracking-widest">15+ Years of Experience</h4>
+            </div>
+        </x-card>
     </x-container>
 @endsection

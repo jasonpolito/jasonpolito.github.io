@@ -35,8 +35,14 @@
                     <x-painterly class="fitty">Polito</x-painterly>
                 </div>
             </div>
-            <x-painterly class="fitty text-orange-600">Full-Stack</x-painterly>
-            <x-painterly class="fitty -mt-2 text-cyan-800">Web Developer</x-painterly>
+            <x-painterly class="my-3 block">
+                <div class="w-full rounded-md bg-cyan-950 px-4 py-2 text-amber-100">
+                    <div>
+                        <div class="fitty tracking-[0.5em]">Full-Stack</div>
+                    </div>
+                </div>
+            </x-painterly>
+            <x-painterly class="fitty -mt-2 text-cyan-950">Web Developer</x-painterly>
 
         </div>
     </x-container>

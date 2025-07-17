@@ -3,7 +3,7 @@
         <defs>
             <filter data-displacement-map id="{{ $id }}">
                 <feTurbulence type="turbulence" baseFrequency="0.017" numOctaves="2" seed="1" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R"
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R"
                     yChannelSelector="G" />
             </filter>
         </defs>

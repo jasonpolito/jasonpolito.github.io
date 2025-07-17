@@ -23,5 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('paper', 'amber-500');
         View::share('ink', 'slate-950');
+        View::share('accent', 'red-900');
+        View::share('dim', 'orange-950');
     }
 }

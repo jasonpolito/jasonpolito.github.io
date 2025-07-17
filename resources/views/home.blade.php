@@ -25,12 +25,6 @@
 
 @section('content')
     <x-container class="font-display text-{{ $ink }} max-w-3xl uppercase">
-        <div class="relative mx-auto w-3/5 pt-8 sm:w-2/5">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-full rounded-full bg-amber-300"></div>
-            </div>
-            @include('_partials.horse1')
-        </div>
         @include('_partials.intro')
         <x-card class="text-transparent">
             <div class="text-{{ $ink }} -mt-6 sm:-mt-8 lg:-mt-12">
@@ -38,6 +32,12 @@
                     Decade of Experience <span class="relative -top-1 text-[0.6em]">✦</span></h4>
             </div>
         </x-card>
+        <div class="relative mx-auto mb-8 mt-4 w-3/5 sm:w-2/5">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-full rounded-full bg-amber-300"></div>
+            </div>
+            @include('_partials.horse1')
+        </div>
         <x-card class="bg-{{ $ink }}">
             @include('_partials._desktop_skills')
             @include('_partials._tablet_skills')

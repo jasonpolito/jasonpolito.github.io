@@ -8,6 +8,9 @@ function buildParticleBackground() {
     // if (isMobile()) return;
 
     const canvas = document.getElementById("flowfield");
+    if (!canvas) {
+        return;
+    }
     const canvasParent = document.getElementById("fullystacked");
     const ctx = canvas.getContext("2d");
 

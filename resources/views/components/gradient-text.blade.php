@@ -1,8 +1,8 @@
 @php
     $c = $attributes->get('class');
-    $gradientColors = !Str::contains($c, 'from-') ? 'from-amber-500 to-red-500' : '';
+    $gradientColors = !Str::contains($c, 'from-') ? 'from-red-700 via-amber-500 to-yellow-400' : '';
 @endphp
 
-<span {{ $attributes->merge(['class' => 'text-transparent bg-clip-text bg-linear-[-72deg] ' . $gradientColors]) }}>
+<span {{ $attributes->merge(['class' => 'text-transparent bg-clip-text bg-linear-[72deg] ' . $gradientColors]) }}>
     {{ $slot }}
 </span>

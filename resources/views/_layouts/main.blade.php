@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-{{ $baseColor }}-950 text-{{ $baseColor }}-100 relative antialiased">
+<body class="text-shadow-slate-800 relative antialiased">
     @yield('content')
     @stack('script')
 </body>

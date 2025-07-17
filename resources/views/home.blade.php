@@ -25,24 +25,28 @@
     Laravel and Vite.')
 
 @section('content')
-    <div class="align-center h-screen-fallback relative z-10 flex max-h-[720px] w-full flex-col justify-center bg-slate-950 text-center sm:h-auto sm:py-32"
-        id="fullystacked">
-        <canvas id="flowfield"
-            class="mask-b-from-25% absolute left-0 top-0 h-full w-full opacity-0 transition-all duration-[2s]"></canvas>
-        <div class="pointer-events-none space-y-4 md:space-y-8">
-            <h3 class="font-mono text-sm uppercase leading-relaxed tracking-widest text-slate-400"><x-gradient-text
-                    class="from-slate-400 via-slate-300 to-slate-400">Jason Polito<br>Full-stack
-                    Developer & Designer</x-gradient-text></h3>
-            <h1 class="font-display text-center text-5xl sm:text-8xl lg:text-9xl"><x-word-rotator
-                    :words="$skills"></x-word-rotator>
-            </h1>
+    <svg width="400" height="400" viewBox="0 0 400 400" style="display: none">
+        <defs>
+            <filter id="distortionFilter">
+                <feTurbulence type="turbulence" baseFrequency="0.017" numOctaves="2" seed="1" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R"
+                    yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+    <script>
+        const displacementFilterValues = [0.02, 0.01, 0.021, 0.017];
+        let displacementIndex = 0;
+        setInterval(() => {
+            const filter = document.querySelector('#distortionFilter feTurbulence');
+            filter.setAttribute('baseFrequency', displacementFilterValues[displacementIndex]);
+            displacementIndex = (displacementIndex + 1) % displacementFilterValues.length;
+        }, 500);
+    </script>
+    <div class="bg-slate-50">
+        <div class="max-w-xl bg-white">
+            <h1 class="font-display fitty [filter:url(#distortionFilter)]">
+                test displacement</h1>
         </div>
     </div>
-    {{-- <div class="py-32 font-mono">
-        <ul>
-            @foreach ($skills as $skill)
-                <li class="text-slate-400">{{ $skill }}</li>
-            @endforeach
-        </ul>
-    </div> --}}
 @endsection

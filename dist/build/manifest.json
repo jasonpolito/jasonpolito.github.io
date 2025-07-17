@@ -1,44 +1,12 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CTUtR9z0.css",
+    "file": "assets/app-J4DpS-ZM.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/fonts/caprasimo-v6-latin-regular.woff2": {
     "file": "assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2",
     "src": "resources/fonts/caprasimo-v6-latin-regular.woff2"
-  },
-  "resources/fonts/courier-prime-v10-latin-700.woff2": {
-    "file": "assets/courier-prime-v10-latin-700-D1YCjmaD.woff2",
-    "src": "resources/fonts/courier-prime-v10-latin-700.woff2"
-  },
-  "resources/fonts/courier-prime-v10-latin-700italic.woff2": {
-    "file": "assets/courier-prime-v10-latin-700italic-CZikIXQl.woff2",
-    "src": "resources/fonts/courier-prime-v10-latin-700italic.woff2"
-  },
-  "resources/fonts/courier-prime-v10-latin-italic.woff2": {
-    "file": "assets/courier-prime-v10-latin-italic-CaR7PCvg.woff2",
-    "src": "resources/fonts/courier-prime-v10-latin-italic.woff2"
-  },
-  "resources/fonts/courier-prime-v10-latin-regular.woff2": {
-    "file": "assets/courier-prime-v10-latin-regular-BbyBr73r.woff2",
-    "src": "resources/fonts/courier-prime-v10-latin-regular.woff2"
-  },
-  "resources/fonts/fira-code-v26-latin-600.woff2": {
-    "file": "assets/fira-code-v26-latin-600-yavC5oj2.woff2",
-    "src": "resources/fonts/fira-code-v26-latin-600.woff2"
-  },
-  "resources/fonts/fira-code-v26-latin-700.woff2": {
-    "file": "assets/fira-code-v26-latin-700-7Dlp22fA.woff2",
-    "src": "resources/fonts/fira-code-v26-latin-700.woff2"
-  },
-  "resources/fonts/fira-code-v26-latin-regular.woff2": {
-    "file": "assets/fira-code-v26-latin-regular-6WyMkEaV.woff2",
-    "src": "resources/fonts/fira-code-v26-latin-regular.woff2"
-  },
-  "resources/fonts/syne-mono-v15-latin-regular.woff2": {
-    "file": "assets/syne-mono-v15-latin-regular-BVIxfnxz.woff2",
-    "src": "resources/fonts/syne-mono-v15-latin-regular.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-ClF3_NKN.js",

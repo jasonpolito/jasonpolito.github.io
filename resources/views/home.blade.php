@@ -36,7 +36,7 @@
                 </div>
             </div>
             <x-painterly class="my-3 block">
-                <div class="w-full rounded-md bg-cyan-950 px-4 py-1.5 text-amber-100">
+                <div class="w-full rounded-md bg-cyan-950 px-4 py-[0.25rem] text-amber-100">
                     <div class="relative">
                         <div class="fitty relative -right-1 tracking-[0.5em]">Full-Stack</div>
                     </div>

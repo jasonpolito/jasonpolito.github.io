@@ -39,28 +39,9 @@
             </div>
         </x-card>
         <x-card class="bg-{{ $ink }}">
-            <ul
-                class="text-md flex flex-wrap justify-between gap-2 text-center leading-[1] text-white sm:gap-4 sm:text-2xl lg:text-lg">
-                <li>UX/UI</li>
-                <li>✦</li>
-                <li>Laravel</li>
-                <li>✦</li>
-                <li>Vue</li>
-                <li>✦</li>
-                <li>React</li>
-                <li class="w-full"></li>
-                <li>Svelte</li>
-                <li>✦</li>
-                <li>Tailwind</li>
-                <li>✦</li>
-                <li>Animation</li>
-                <li class="w-full"></li>
-                <li>Javascript</li>
-                <li>✦</li>
-                <li>Databases</li>
-                <li>✦</li>
-                <li>PHP</li>
-            </ul>
+            @include('_partials._desktop_skills')
+            @include('_partials._tablet_skills')
+            @include('_partials._mobile_skills')
         </x-card>
     </x-container>
 @endsection

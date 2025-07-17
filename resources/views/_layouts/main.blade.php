@@ -15,10 +15,11 @@
 
 </head>
 
-<body class="bg-3{{ $paper }} relative antialiased">
-    <x-painterly>
+<body class="bg-3{{ $paper }} relative min-h-dvh antialiased selection:bg-red-500 selection:text-white">
+    <x-painterly class="relative block min-h-dvh">
         @yield('content')
-        <div class="absolute inset-0 size-full" style="background-image: url({{ asset('assets/images/texture.png') }})">
+        <div class="pointer-events-none absolute inset-0 size-full"
+            style="background-image: url({{ asset('assets/images/texture.png') }})">
         </div>
     </x-painterly>
     @stack('script')

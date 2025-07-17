@@ -8,5 +8,5 @@
             </filter>
         </defs>
     </svg>
-    <div style="filter: url(#{{ $id }})">{{ $slot }}</div>
+    <div style="filter: url(#{{ $id }})" class="relative min-h-full">{{ $slot }}</div>
 </div>

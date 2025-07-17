@@ -1,4 +1,4 @@
-<ul class="hidden flex-wrap justify-between gap-3 text-center text-3xl leading-[1] text-white lg:flex">
+<ul class="hidden flex-wrap justify-between gap-3 text-center text-3xl leading-[1] lg:flex">
     <li>Laravel</li>
     <li>✦</li>
     <li>Vue</li>

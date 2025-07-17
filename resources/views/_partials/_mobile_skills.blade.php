@@ -1,4 +1,4 @@
-<ul class="text-md flex flex-wrap justify-between gap-2 text-center leading-[1] text-white sm:hidden">
+<ul class="text-md flex flex-wrap justify-between gap-2 text-center leading-[1] sm:hidden">
     <li>UX/UI</li>
     <li>✦</li>
     <li>Laravel</li>

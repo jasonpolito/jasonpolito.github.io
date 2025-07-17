@@ -9,7 +9,7 @@
     <x-container class="font-display text-{{ $ink }} max-w-3xl uppercase">
         @include('_partials.intro')
         <x-card class="text-transparent">
-            <div class="text-{{ $ink }} -mt-6 sm:-mt-8 lg:-mt-12">
+            <div class="-mt-6 text-orange-950 sm:-mt-8 lg:-mt-12">
                 <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span> Over a
                     Decade of Experience <span class="relative -top-1 text-[0.6em]">✦</span></h4>
             </div>

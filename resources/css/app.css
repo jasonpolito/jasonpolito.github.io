@@ -23,7 +23,8 @@
         height: 100dvh;
     }
     .nowrap-forced {
-        &[style] {
+        white-space: nowrap !important;
+        *[style] {
             white-space: nowrap !important;
         }
     }

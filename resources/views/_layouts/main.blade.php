@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="relative bg-amber-100 antialiased">
+<body class="bg-{{ $paper }} relative antialiased">
     @yield('content')
     @stack('script')
 </body>

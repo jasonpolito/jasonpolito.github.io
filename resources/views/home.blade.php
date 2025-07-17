@@ -27,7 +27,14 @@
 @section('content')
     <x-container class="max-w-3xl">
         <div class="pt-16">
-            <x-painterly class="fitty font-display uppercase text-cyan-950">Jason Polito</x-painterly>
+            <div class="font-display gap-x-8 gap-y-2 uppercase leading-[0.9] text-cyan-950 sm:flex">
+                <div class="w-full">
+                    <x-painterly class="fitty">Jason</x-painterly>
+                </div>
+                <div class="w-full">
+                    <x-painterly class="fitty">Polito</x-painterly>
+                </div>
+            </div>
         </div>
     </x-container>
 @endsection

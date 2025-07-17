@@ -1,3 +1,3 @@
-<div {{ $attributes->merge(['class' => 'container mx-auto px-4 md:px-6 xl:px-8']) }}>
+<div {{ $attributes->merge(['class' => 'container mx-auto px-6 md:px-8 xl:px-12']) }}>
     {{ $slot }}
 </div>

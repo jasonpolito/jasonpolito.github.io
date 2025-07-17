@@ -26,8 +26,13 @@
 
 @section('content')
     <x-container class="font-display text-{{ $ink }} max-w-3xl uppercase">
-        @include('_partials.intro')
-        <div class="text-blue-950">@include('_partials.intro')</div>
         <div class="text-emerald-950">@include('_partials.intro')</div>
+        <div class="text-cyan-950">
+            <x-card>
+                <div class="-my-2">
+                    <h4 class="fitty tracking-widest">15+ Years of Experience</h4>
+                </div>
+            </x-card>
+        </div>
     </x-container>
 @endsection

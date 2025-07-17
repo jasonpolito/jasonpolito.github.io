@@ -2,5 +2,12 @@
 import fitty from "fitty";
 import "./wordRotator";
 
-fitty(".fitty");
-window.dispatchEvent(new Event("resize"));
+const fitties = fitty(".fitty");
+
+import "./painterly";
+
+setTimeout(() => {
+    fitties.forEach((fittyInstance) => {
+        fittyInstance.fit();
+    });
+}, 10);

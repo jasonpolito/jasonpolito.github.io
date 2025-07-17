@@ -25,28 +25,9 @@
     Laravel and Vite.')
 
 @section('content')
-    <svg width="400" height="400" viewBox="0 0 400 400" style="display: none">
-        <defs>
-            <filter id="distortionFilter">
-                <feTurbulence type="turbulence" baseFrequency="0.017" numOctaves="2" seed="1" result="noise" />
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R"
-                    yChannelSelector="G" />
-            </filter>
-        </defs>
-    </svg>
-    <script>
-        const displacementFilterValues = [0.02, 0.01, 0.021, 0.017];
-        let displacementIndex = 0;
-        setInterval(() => {
-            const filter = document.querySelector('#distortionFilter feTurbulence');
-            filter.setAttribute('baseFrequency', displacementFilterValues[displacementIndex]);
-            displacementIndex = (displacementIndex + 1) % displacementFilterValues.length;
-        }, 500);
-    </script>
-    <div class="bg-slate-50">
-        <div class="max-w-xl bg-white">
-            <h1 class="font-display fitty [filter:url(#distortionFilter)]">
-                test displacement</h1>
+    <x-container class="max-w-3xl">
+        <div class="pt-16">
+            <x-painterly class="fitty font-display uppercase text-cyan-950">Jason Polito</x-painterly>
         </div>
-    </div>
+    </x-container>
 @endsection

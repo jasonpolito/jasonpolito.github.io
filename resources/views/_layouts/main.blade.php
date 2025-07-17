@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="text-shadow-slate-800 relative antialiased">
+<body class="relative bg-amber-100 antialiased">
     @yield('content')
     @stack('script')
 </body>

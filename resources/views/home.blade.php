@@ -54,6 +54,12 @@
                 <li>Tailwind</li>
                 <li>✦</li>
                 <li>Animation</li>
+                <li class="w-full"></li>
+                <li>Javascript</li>
+                <li>✦</li>
+                <li>Databases</li>
+                <li>✦</li>
+                <li>PHP</li>
             </ul>
         </x-card>
     </x-container>

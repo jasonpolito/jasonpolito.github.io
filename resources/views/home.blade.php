@@ -1,21 +1,3 @@
-@php
-    $skills = [
-        'UX+UI',
-        'Laravel',
-        'Vue',
-        'React',
-        'Tailwind',
-        'Animation',
-        'Svelte',
-        'PHP',
-        'Node',
-        'WordPress',
-        'Databases',
-        'Performance',
-        'Print Media',
-    ];
-@endphp
-
 @extends('_layouts.main')
 
 @section('meta_title', 'Home Page - jasonpolito.github.io')
@@ -32,10 +14,7 @@
                     Decade of Experience <span class="relative -top-1 text-[0.6em]">✦</span></h4>
             </div>
         </x-card>
-        <div class="relative mx-auto mb-8 mt-4 w-3/5 sm:w-2/5">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-full rounded-full bg-amber-300"></div>
-            </div>
+        <div class="relative mx-auto mb-6 w-3/5 sm:-mt-4 sm:mb-8 sm:w-2/5 lg:-mt-8">
             @include('_partials.horse1')
         </div>
         <x-card class="bg-{{ $ink }}">

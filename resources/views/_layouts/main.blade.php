@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="bg-3{{ $paper }} relative min-h-dvh antialiased selection:bg-red-500 selection:text-white">
+<body class="relative min-h-dvh bg-gradient-to-r from-orange-200 via-orange-100 to-orange-200 antialiased">
     <x-painterly class="relative block min-h-dvh">
         @yield('content')
         <div class="pointer-events-none absolute inset-0 size-full"

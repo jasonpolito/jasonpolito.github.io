@@ -15,7 +15,7 @@
                 </div>
             </div>
         </h3>
-        <h3 class="fitty -mb-4 -mt-2 text-sky-900">Developer & Designer</h3>
+        <h3 class="fitty -mb-4 -mt-2 text-red-800">Developer & Designer</h3>
         {{-- <div class="lg:hidden">
             <h3 class="fitty -mb-4 -mt-2 text-current">Web Developer</h3>
         </div> --}}

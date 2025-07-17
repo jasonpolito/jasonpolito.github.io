@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('paper', 'gray-200');
+        View::share('paper', 'amber-500');
         View::share('ink', 'slate-950');
     }
 }

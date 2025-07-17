@@ -1,8 +1,3 @@
-@php
-    // bg-slate-950
-    // bg-slate-900
-@endphp
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +15,7 @@
 
 </head>
 
-<body class="relative bg-amber-100 antialiased">
+<body class="bg-{{ $baseColor }} dark:bg-{{ $textColor }} relative antialiased">
     @yield('content')
     @stack('script')
 </body>

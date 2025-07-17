@@ -4,7 +4,7 @@ import "./wordRotator";
 
 const fitties = fitty(".fitty");
 
-// import "./painterly";
+import "./painterly";
 
 setTimeout(() => {
     fitties.forEach((fittyInstance) => {

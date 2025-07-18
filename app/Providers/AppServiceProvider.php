@@ -22,11 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('paper', 'amber-500');
-        View::share('ink', 'slate-950');
-        View::share('accent', 'red-800');
-        View::share('accent2', 'cyan-950');
-        View::share('dim', 'orange-950');
+        foreach (config('colors') as $key => $color) {
+            View::share($key, $color);
+        }
 
         Blade::directive('highlightWords', function ($words) {
             return "<?php 
@@ -38,11 +36,11 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('endHighlightWords', function () {
             return "<?php
                 \$content = ob_get_clean();
-                \$accent = config('colors.accent');
+                \$highlight = config('colors.white');
                 foreach (\$words as \$word) {
                     \$content = preg_replace_callback(
                         '/\\b(' . \$word . ')\\b/i',
-                        fn(\$matches) => '<span class=\"text-' . \$accent . '\">' . \$matches[1] . '</span>',
+                        fn(\$matches) => '<span class=\"text-' . \$highlight . '\">' . \$matches[1] . '</span>',
                         \$content
                     );
                 }

@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('endHighlightWords', function () {
             return "<?php
                 \$content = ob_get_clean();
-                \$highlight = config('colors.white');
+                \$highlight = config('colors.highlight');
                 foreach (\$words as \$word) {
                     \$content = preg_replace_callback(
                         '/\\b(' . \$word . ')\\b/i',

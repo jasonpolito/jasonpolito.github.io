@@ -15,7 +15,13 @@
     <li class="w-full"></li>
     <li>Animation</li>
     <li>✦</li>
-    <li>Logos</li>
+    <li>Servers</li>
     <li>✦</li>
     <li>Print</li>
+    <li class="w-full"></li>
+    <li>Nuxt</li>
+    <li>✦</li>
+    <li>Logos</li>
+    <li>✦</li>
+    <li>Cartwheels</li>
 </ul>

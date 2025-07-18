@@ -18,4 +18,10 @@
     <li>Databases</li>
     <li>✦</li>
     <li>PHP</li>
+    <li class="w-full"></li>
+    <li>Nuxt</li>
+    <li>✦</li>
+    <li>Logos</li>
+    <li>✦</li>
+    <li>Cartwheels</li>
 </ul>

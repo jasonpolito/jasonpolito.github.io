@@ -12,8 +12,8 @@
     </div>
 </x-card> --}}
 
-<x-card class="-mt-6 text-transparent">
-    <div class="flex">
+<x-card class="-mt-3 text-transparent sm:-mt-6">
+    <div class="flex flex-wrap gap-3 sm:flex-nowrap sm:gap-6">
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }} text-justify normal-case leading-[1.6rem] md:text-xl">
                 @highlightWords([
@@ -37,7 +37,28 @@
                     like a
                     seasoned ranch hand, style with the precision of Tailwind, and handle Node and databases like a poker
                     game I
-                    never lose. I've branded logos, animated campfire stories, set up servers sturdier than a saloon safe,
+                    never lose.
+                @endHighlightWords
+            </p>
+        </div>
+        <div class="sm:w-1/2">
+            <p class="text-{{ $dim }} text-justify normal-case leading-[1.6rem] md:text-xl">
+                @highlightWords([
+                    'full&#8209;stack',
+                    'Laravel',
+                    'Vue',
+                    'React',
+                    'PHP',
+                    'Tailwind',
+                    'Node',
+                    'databases',
+                    'logos',
+                    'animated',
+                    'servers',
+                    'Nuxt',
+                    'cartwheels'
+                ])
+                    I've branded logos, animated campfire stories, set up servers sturdier than a saloon safe,
                     and
                     even dabbled in the fine print arts. Nuxt? Tamed it. Cartwheels? I do 'em just for flair. Whether it's
                     pixels or pipelines, I'm your all-terrain tech cowboy.

@@ -19,10 +19,10 @@
         </div>
         <x-card class="text-transparent">
             <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
-                <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span> Skilled
-                    In Nearly Everything <span class="relative -top-1 text-[0.6em]">✦</span></h4>
+                <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span>
+                    Can Do Darn Near Everything <span class="relative -top-1 text-[0.6em]">✦</span></h4>
             </div>
         </x-card>
-        <div class="-mt-6">@include('_partials._skills')</div>
+        <div class="lg:-mt-15 -mt-6 sm:-mt-9">@include('_partials._skills')</div>
     </x-container>
 @endsection

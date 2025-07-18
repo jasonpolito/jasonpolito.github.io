@@ -22,6 +22,9 @@
         height: 100vh;
         height: 100dvh;
     }
+    .fill-parent {
+        @apply w-full h-full inset-0 absolute;
+    }
     .nowrap-forced {
         white-space: nowrap !important;
         *[style] {

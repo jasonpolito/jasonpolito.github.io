@@ -16,7 +16,7 @@
 </head>
 
 <body
-    class="from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} relative min-h-dvh bg-gradient-to-r antialiased selection:bg-red-800 selection:text-white">
+    class="from-{{ $paperDim }} via-{{ $paper }} font-display to-{{ $paperDim }} relative min-h-dvh bg-gradient-to-r uppercase antialiased selection:bg-red-800 selection:text-white">
     <x-painterly class="relative block min-h-dvh">
         @yield('content')
         <div class="pointer-events-none absolute inset-0 size-full"

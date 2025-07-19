@@ -30,6 +30,8 @@
                 style="background-image: url({{ asset('assets/images/canvas.png') }})">
             </div>
         </div>
+        <div class="py-8 text-center text-xs text-white sm:-mt-6 lg:-mt-12">&copy; {{ date('Y') }} – Jason Polito
+        </div>
     </x-painterly>
     @stack('script')
 </body>

@@ -33,7 +33,6 @@
                 </x-card>
             </div>
             @include('_partials._about')
-            <div class="text-{{ $dim }} pt-8 text-center text-xs">&copy; {{ date('Y') }} – Jason Polito</div>
             @foreach (['top', 'bottom'] as $item)
                 @for ($i = 0; $i < 2; $i++)
                     <div

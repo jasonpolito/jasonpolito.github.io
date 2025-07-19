@@ -26,15 +26,17 @@
                 @highlightWords($highlightedWords)
                     Saddle up partner and let me tell you a tale. I'm a full&#8209;stack wrangler with one boot in code
                     and the other in design. I ride 'round the Laravel and PHP gulches and the Vue and React ranges.
-                    Ropin' in Tailwind like a seasoned ranch hand and handlin' databases like a poker game I never lose.
+                    Ropin' in Tailwind and CSS like a well seasoned ranch hand and handlin databases like a poker game I
+                    never
+                    lose.
                 @endHighlightWords
             </p>
         </div>
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }} mb-3">
                 @highlightWords($highlightedWords)
-                    From branding logos, to animating camp fires and stirring up servers sturdier than a saloon safe!
-                    Whether it's pixels or pipelines, I'm your full&#8209;stack, all-terrain tech cowboy.
+                    From branding logos, to animating camp fires and stirring up servers more sturdy than a saloon safe!
+                    Whether it's pixels or pipelines, I'm your full&#8209;stack, all terrain tech cowboy.
                 @endHighlightWords
             </p>
             <p class="text-{{ $dim }}">
@@ -48,7 +50,7 @@
                 <div class="scale-[0.6]">✦</div>
             </div> --}}
             <a href="#"
-                class="text-{{ $accent }} hover:text-{{ $ink }} focus:text-{{ $ink }} block focus:outline-none">
+                class="text-{{ $ink }} hover:text-{{ $accent }} focus:text-{{ $accent }} block focus:outline-none">
                 <x-card class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">
                     <div class="-mx-6 flex items-center justify-center gap-6 text-white">
                         <h4 class="text-xl">Say howdy! </h4>

@@ -33,7 +33,7 @@
 @endphp
 
 <x-card class="-mt-3 text-transparent sm:-mt-6">
-    <div class="flex flex-wrap gap-3 text-justify text-lg uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6">
+    <div class="flex flex-wrap gap-3 text-justify uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6 sm:text-lg">
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }}">
                 @highlightWords($highlightedWords)

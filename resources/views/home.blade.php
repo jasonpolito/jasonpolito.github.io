@@ -7,7 +7,7 @@
 
 @section('content')
     <x-container
-        class="font-display text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} relative max-w-3xl bg-gradient-to-r">
+        class="font-display text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} outline-16 outline-{{ $dim }} relative max-w-3xl rounded bg-gradient-to-r">
         @include('_partials.intro')
         <x-card class="text-transparent">
             <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">

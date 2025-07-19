@@ -16,17 +16,19 @@
 </head>
 
 <body
-    class="from-{{ $paperDim }} via-{{ $paper }} font-display to-{{ $paperDim }} relative min-h-dvh text-pretty bg-gradient-to-r uppercase antialiased selection:bg-red-800 selection:text-white">
+    class="font-display relative min-h-dvh text-pretty bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 uppercase antialiased selection:bg-red-800 selection:text-white">
     <x-painterly class="relative block min-h-dvh">
-        @yield('content')
-        <div class="pointer-events-none absolute inset-0 size-full"
-            style="background-image: url({{ asset('assets/images/asfalt-light.png') }})">
-        </div>
-        <div class="pointer-events-none absolute inset-0 size-full scale-x-[-1]"
-            style="background-image: url({{ asset('assets/images/asfalt-dark.png') }})">
-        </div>
-        <div class="pointer-events-none absolute inset-0 size-full"
-            style="background-image: url({{ asset('assets/images/canvas.png') }})">
+        <div class="lg:py-16">
+            @yield('content')
+            <div class="pointer-events-none absolute inset-0 size-full"
+                style="background-image: url({{ asset('assets/images/asfalt-light.png') }})">
+            </div>
+            <div class="pointer-events-none absolute inset-0 size-full scale-x-[-1]"
+                style="background-image: url({{ asset('assets/images/asfalt-dark.png') }})">
+            </div>
+            <div class="pointer-events-none absolute inset-0 size-full"
+                style="background-image: url({{ asset('assets/images/canvas.png') }})">
+            </div>
         </div>
     </x-painterly>
     @stack('script')

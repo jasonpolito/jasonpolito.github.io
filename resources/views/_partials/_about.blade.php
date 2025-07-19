@@ -1,17 +1,3 @@
-{{-- <x-card class="mt-8 hidden text-transparent sm:block">
-    <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
-        <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span>
-            I'll spin ya a yarn about myself <span class="relative -top-1 text-[0.6em]">✦</span></h4>
-    </div>
-</x-card>
-
-<x-card class="text-transparent sm:hidden">
-    <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
-        <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span>
-            Let's spin a yarn, shall we? <span class="relative -top-1 text-[0.6em]">✦</span></h4>
-    </div>
-</x-card> --}}
-
 @php
     $highlightedWords = [
         'full&#8209;stack',
@@ -32,7 +18,7 @@
     ];
 @endphp
 
-<x-card class="-mt-3 text-transparent sm:-mt-6">
+<x-card class="-mb-8 -mt-3 text-transparent sm:-mt-6">
     <div class="flex flex-wrap gap-3 text-justify uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6 sm:text-lg">
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }}">
@@ -62,7 +48,8 @@
                 <div class="scale-[0.6]">✦</div>
                 <div class="scale-[0.6]">✦</div>
             </div> --}}
-            <a href="" class="text-{{ $accent }} hover:text-{{ $ink }} block">
+            <a href="#"
+                class="text-{{ $accent }} hover:text-{{ $ink }} focus:text-{{ $ink }} block focus:outline-none">
                 <x-card class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">
                     <div class="-mx-6 flex items-center justify-center gap-6 text-white">
                         <h4 class="text-xl">Say howdy! </h4>

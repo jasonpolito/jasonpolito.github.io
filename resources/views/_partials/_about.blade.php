@@ -33,12 +33,12 @@
 @endphp
 
 <x-card class="-mt-3 text-transparent sm:-mt-6">
-    <div class="flex flex-wrap gap-3 text-justify text-xl normal-case leading-[1.8rem] sm:flex-nowrap sm:gap-6">
+    <div class="flex flex-wrap gap-3 text-justify text-lg uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6">
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }}">
                 @highlightWords($highlightedWords)
-                    Saddle up partner and let me tell you a tale — I'm a full&#8209;stack wrangler with one boot in code
-                    and the other in design. I ride through the Laravel and PHP gulches and the Vue and React ranges.
+                    Saddle up partner and let me tell you a tale. I'm a full&#8209;stack wrangler with one boot in code
+                    and the other in design. I ride 'round the Laravel and PHP gulches and the Vue and React ranges.
                     I
                     rope in
                     Tailwind like a seasoned ranch hand and handle databases like a poker game I never lose.
@@ -62,13 +62,14 @@
                 <div class="scale-[0.6]">✦</div>
                 <div class="scale-[0.6]">✦</div>
             </div> --}}
-            <x-card
-                class="text-{{ $accent }} p-0! hover:text-{{ $ink }} relative bg-current text-xs uppercase tracking-widest">
-                <div class="-mx-6 flex items-center justify-center gap-6 text-white">
-                    <h4 class="text-xl">Say howdy! </h4>
-                    <div class="w-12">@include('_partials.point')</div>
-                </div>
-            </x-card>
+            <a href="" class="text-{{ $accent }} hover:text-{{ $ink }} block">
+                <x-card class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">
+                    <div class="-mx-6 flex items-center justify-center gap-6 text-white">
+                        <h4 class="text-xl">Say howdy! </h4>
+                        <div class="w-12">@include('_partials.point')</div>
+                    </div>
+                </x-card>
+            </a>
         </div>
     </div>
 </x-card>

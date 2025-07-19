@@ -40,7 +40,7 @@
             </p>
             <p class="text-{{ $dim }}">
                 @highlightWords($highlightedWords)
-                    Well, what are ya waitin' for?! Giddy up!
+                    Well compadre, what are ya waitin' for – Giddy up!
                 @endHighlightWords
             </p>
             {{-- <div class="text-{{ $dim }} mb-2 mt-4 flex justify-center gap-1 text-4xl">

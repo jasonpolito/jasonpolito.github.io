@@ -25,9 +25,7 @@
                 @highlightWords($highlightedWords)
                     Saddle up partner and let me tell you a tale. I'm a full&#8209;stack wrangler with one boot in code
                     and the other in design. I ride 'round the Laravel and PHP gulches and the Vue and React ranges.
-                    I
-                    rope in
-                    Tailwind like a seasoned ranch hand and handle databases like a poker game I never lose.
+                    Ropin' in Tailwind like a seasoned ranch hand and handlin' databases like a poker game I never lose.
                 @endHighlightWords
             </p>
         </div>

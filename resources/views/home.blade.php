@@ -7,7 +7,7 @@
 
 @section('content')
     <x-container
-        class="font-display text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} max-w-3xl bg-gradient-to-r">
+        class="font-display text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} relative max-w-3xl bg-gradient-to-r">
         @include('_partials.intro')
         <x-card class="text-transparent">
             <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
@@ -37,5 +37,12 @@
         @include('_partials._about')
 
         <div class="text-{{ $dim }} pt-8 text-center text-xs">&copy; {{ date('Y') }} – Jason Polito</div>
+        @foreach (['top', 'bottom'] as $item)
+            @for ($i = 0; $i < 2; $i++)
+                <div
+                    class="text-{{ $dim }} {{ $item }}-0 {{ $i ? 'left' : 'right' }}-0 leading-2 absolute p-2">
+                    ✦</div>
+            @endfor
+        @endforeach
     </x-container>
 @endsection

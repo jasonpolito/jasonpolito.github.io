@@ -1,12 +1,16 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CpvJmyio.css",
+    "file": "assets/app-CtELh9-F.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/fonts/caprasimo-v6-latin-regular.woff2": {
     "file": "assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2",
     "src": "resources/fonts/caprasimo-v6-latin-regular.woff2"
+  },
+  "resources/fonts/sancreek-v26-latin-regular.woff2": {
+    "file": "assets/sancreek-v26-latin-regular-BavC9fA5.woff2",
+    "src": "resources/fonts/sancreek-v26-latin-regular.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-iFMb0rbq.js",

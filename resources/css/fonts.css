@@ -1,4 +1,12 @@
 @font-face {
+  font-display: swap;
+  font-family: 'Sancreek';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/sancreek-v26-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
     font-display: swap;
     font-family: "Caprasimo";
     font-style: normal;

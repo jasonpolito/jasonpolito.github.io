@@ -1,6 +1,7 @@
 <x-card>
     <div>
-        <div class="text-{{ $accent }} gap-x-8 gap-y-2 uppercase leading-[0.9] sm:flex">
+        <div
+            class="text-{{ $accent }} font-display2 gap-x-8 gap-y-2 text-3xl uppercase leading-[0.9] sm:flex sm:text-4xl">
             <div class="w-full">
                 <h3 class="fitty">Jason</h3>
             </div>
@@ -15,6 +16,6 @@
                 </div>
             </div>
         </h3>
-        <h3 class="fitty text-{{ $accent }} -mb-4 -mt-2">Developer & Designer</h3>
+        <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">Developer & Designer</h3>
     </div>
 </x-card>

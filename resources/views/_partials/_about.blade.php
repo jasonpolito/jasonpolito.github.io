@@ -6,6 +6,7 @@
         'React',
         'PHP',
         'Tailwind',
+        'CSS',
         'Node',
         'databases',
         'logos',

@@ -19,6 +19,7 @@
             <div class="fill-parent -left-16! scale-[0.9] text-red-800">@include('_partials.horse1')</div>
             <div class="relative">@include('_partials.horse1')</div>
         </div>
+
         <x-card class="text-transparent">
             <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
                 <h4 class="fitty nowrap-forced tracking-widest"><span class="relative -top-1 text-[0.6em]">✦</span>

@@ -33,26 +33,38 @@
 @endphp
 
 <x-card class="-mt-3 text-transparent sm:-mt-6">
-    <div class="flex flex-wrap gap-3 sm:flex-nowrap sm:gap-6">
+    <div class="flex flex-wrap gap-3 text-justify text-xl normal-case leading-[1.8rem] sm:flex-nowrap sm:gap-6">
         <div class="sm:w-1/2">
-            <p class="text-{{ $dim }} text-justify normal-case leading-[1.6rem] md:text-xl">
+            <p class="text-{{ $dim }}">
                 @highlightWords($highlightedWords)
                     Saddle up partner and let me tell you a tale — I'm a full&#8209;stack wrangler with one boot in code
-                    and the other in design. Ridin' clean from Laravel and PHP gulches through the Vue and React ranges. I
+                    and the other in design. I ride through the Laravel and PHP gulches and the Vue and React ranges.
+                    I
                     rope in
                     Tailwind like a seasoned ranch hand and handle databases like a poker game I never lose.
                 @endHighlightWords
             </p>
         </div>
         <div class="sm:w-1/2">
-            <p class="text-{{ $dim }} text-justify normal-case leading-[1.6rem] md:text-xl">
+            <p class="text-{{ $dim }} mb-3">
                 @highlightWords($highlightedWords)
                     From branding logos, to animating camp fires and stirring up servers sturdier than a saloon safe!
                     Whether it's pixels or pipelines, I'm your full&#8209;stack, all-terrain tech cowboy.
                 @endHighlightWords
             </p>
-            <x-card class="text-{{ $accent }} relative bg-current text-xs">
-                <div class="-mx-6 flex items-center justify-center gap-3 text-white">
+            <p class="text-{{ $dim }}">
+                @highlightWords($highlightedWords)
+                    Well, what are ya waitin' for?! Giddy up!
+                @endHighlightWords
+            </p>
+            {{-- <div class="text-{{ $dim }} mb-2 mt-4 flex justify-center gap-1 text-4xl">
+                <div class="scale-[0.6]">✦</div>
+                <div class="scale-[0.6]">✦</div>
+                <div class="scale-[0.6]">✦</div>
+            </div> --}}
+            <x-card
+                class="text-{{ $accent }} p-0! hover:text-{{ $ink }} relative bg-current text-xs uppercase tracking-widest">
+                <div class="-mx-6 flex items-center justify-center gap-6 text-white">
                     <h4 class="text-xl">Say howdy! </h4>
                     <div class="w-12">@include('_partials.point')</div>
                 </div>

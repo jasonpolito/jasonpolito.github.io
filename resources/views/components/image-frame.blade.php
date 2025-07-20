@@ -8,9 +8,9 @@
             <div class="bg-{{ $item }}-400 size-1 rounded-full"></div>
         @endforeach
     </div>
-    <div>
+    <div class="border-3 border-{{ $ink }} rounded-b group-hover:border-slate-700 group-focus:border-slate-700">
         <img src="{{ asset($src) }}" alt=""
-            class="filter-[url(#posterize1)_saturate(0)_sepia(0.06)_invert(100)] relative rounded-b mix-blend-multiply group-hover:mix-blend-normal group-hover:contrast-100 group-hover:saturate-100 group-hover:sepia-0 group-focus:mix-blend-normal group-focus:contrast-100 group-focus:saturate-100 group-focus:sepia-0">
+            class="filter-[url(#posterize1)_saturate(0)_sepia(0.06)_invert(100)] relative mix-blend-multiply group-hover:mix-blend-normal group-hover:contrast-100 group-hover:saturate-100 group-hover:sepia-0 group-focus:mix-blend-normal group-focus:contrast-100 group-focus:saturate-100 group-focus:sepia-0">
         <svg class="fill-parent" viewBox="0 0 500 500" aria-hidden="true">
             <filter id="posterize1" filterRes="512">
                 <feColorMatrix type="saturate" values="0.35" result="desat" />

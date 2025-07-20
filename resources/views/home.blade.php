@@ -32,22 +32,19 @@
                     <div class="text-white">@include('_partials._skills')</div>
                 </x-card>
             </div>
+
             @include('_partials._about')
 
-            <div class="-mx-2 flex flex-wrap">
-                @for ($i = 0; $i < 6; $i++)
-                    <div class="w-1/2 p-2 sm:w-1/3">
-                        <x-image-frame src="{{ asset('assets/images/' . Arr::random(['mmb_1.png', 'hh_1.png'])) }}" />
-                    </div>
+            <div class="text-{{ $dim }} my-12 flex justify-center gap-3">
+                @for ($i = 0; $i < 3; $i++)
+                    <div>✦</div>
                 @endfor
             </div>
-            @foreach (['top', 'bottom'] as $item)
-                @for ($i = 0; $i < 2; $i++)
-                    <div
-                        class="text-{{ $dim }} {{ $item }}-0 {{ $i ? 'left' : 'right' }}-0 leading-2 absolute p-2">
-                        ✦</div>
-                @endfor
-            @endforeach
+
+            @include('_partials._work')
+
+            @include('_partials._corner_stars')
+
         </x-container>
     </div>
 @endsection

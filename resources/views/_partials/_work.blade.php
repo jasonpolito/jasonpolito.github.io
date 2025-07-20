@@ -1,3 +1,13 @@
+@php
+    $work = [
+        'Halifax Health' => 'hh_1.png',
+        'Dr. Mary McLeod Bethune' => 'mmb_1.png',
+        'Greencourse Solutions' => 'gc_1.png',
+        'Volusia Veterans' => 'vv_1.png',
+        'Accept America' => 'aa_1.png',
+    ];
+@endphp
+
 <x-card>
     <div>
         <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">Fresh Off The Trail</h3>
@@ -11,15 +21,6 @@
     </div>
 </x-card>
 
-
-
-@php
-    $work = [
-        'Halifax Health' => 'hh_1.png',
-        'Dr. Mary McLeod Bethune' => 'mmb_1.png',
-        'Greencourse Solutions' => 'gc_1.png',
-    ];
-@endphp
 <div class="-mx-1.5 flex flex-wrap">
     @foreach ($work as $title => $image)
         <div class="w-1/2 p-2 sm:w-1/3">

@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => '']) }}>
+<div {{ $attributes->merge(['class' => 'relative']) }}>
     <svg width="400" height="400" viewBox="0 0 400 400" style="display: none">
         <defs>
             <filter data-displacement-map id="{{ $id }}">

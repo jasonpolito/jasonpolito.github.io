@@ -44,6 +44,11 @@
     }
 }
 
+html,
+body {
+    position: relative;
+}
+
 .color-spin {
     animation: color-spin 5s linear infinite;
 }

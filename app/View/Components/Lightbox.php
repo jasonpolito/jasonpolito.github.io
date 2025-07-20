@@ -6,16 +6,16 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Painterly extends Component
+class Lightbox extends Component
 {
     public string $id;
 
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(string $id = '')
     {
-        $this->id = uniqid('displacement-map-');
+        $this->id = $id ?? uniqid('lightbox-');
     }
 
     /**
@@ -23,6 +23,6 @@ class Painterly extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.painterly');
+        return view('components.lightbox');
     }
 }

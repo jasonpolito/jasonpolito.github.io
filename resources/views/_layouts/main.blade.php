@@ -20,20 +20,14 @@
     <x-painterly class="relative block min-h-dvh">
         <div class="lg:py-16">
             @yield('content')
-            <div class="pointer-events-none absolute inset-0 size-full"
-                style="background-image: url({{ asset('assets/images/asfalt-light.png') }})">
-            </div>
-            <div class="pointer-events-none absolute inset-0 size-full scale-x-[-1]"
-                style="background-image: url({{ asset('assets/images/asfalt-dark.png') }})">
-            </div>
-            <div class="pointer-events-none absolute inset-0 size-full"
-                style="background-image: url({{ asset('assets/images/canvas.png') }})">
-            </div>
+            @include('_partials._texture_overlay')
         </div>
         <div class="py-8 text-center text-xs text-white sm:-mt-6 lg:-mt-12">&copy; {{ date('Y') }} – Jason Polito
         </div>
     </x-painterly>
-    @stack('script')
+    @stack('scripts')
+    @stack('lightboxes')
+    @stack('htmlClose')
 </body>
 
 </html>

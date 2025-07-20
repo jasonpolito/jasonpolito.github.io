@@ -23,9 +23,31 @@
 
 <div class="-mx-1.5 flex flex-wrap">
     @foreach ($work as $title => $image)
+        @php
+            $id = uniqid('lightbox-');
+        @endphp
         <div class="w-full p-2 sm:w-1/2 lg:w-1/3">
             <div class="text-{{ $dim }} mb-2 text-center text-xs">{{ $title }}</div>
-            <x-image-frame src="{{ asset('assets/images/' . $image) }}" />
+            <x-lightbox :$id>
+                <x-slot:trigger>
+                    <x-image-frame src="{{ asset('assets/images/' . $image) }}" />
+                </x-slot:trigger>
+                <x-slot:content>
+                    <x-painterly class="bg-{{ $ink }} pointer-events-none fixed inset-0 h-screen w-screen">
+                        <label for="{{ $id }}" class="pointer-events-auto pointer-cursor fill-parent"></label>
+                        <div class="bg-{{ $ink }} pointer-events-none py-16">
+                            <x-container
+                                class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} outline-16 outline-{{ $inkDim }} pointer-events-none relative max-w-3xl rounded bg-gradient-to-r">
+                                <div class="pointer-events-auto">
+                                    <h3 class="font-display2 fitty">{{ $title }}</h3>
+                                    <img src="{{ asset('assets/images/' . $image) }}" class="relative z-[999]" />
+                                </div>
+                            </x-container>
+                            @include('_partials._texture_overlay', ['class' => ''])
+                        </div>
+                    </x-painterly>
+                </x-slot:content>
+            </x-lightbox>
         </div>
     @endforeach
 </div>

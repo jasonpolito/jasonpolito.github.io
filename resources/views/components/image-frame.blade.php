@@ -2,7 +2,7 @@
     $id = uniqid('image-frame-');
 @endphp
 <button
-    class="padding-0 group relative block appearance-none rounded shadow-sm shadow-amber-950/10 outline-none hover:z-10 hover:rotate-0 hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:rotate-0 focus:scale-105 focus:shadow-lg focus:shadow-amber-950/20">
+    class="padding-0 group relative block appearance-none rounded shadow-sm shadow-amber-950/10 outline-none hover:z-10 hover:rotate-0 hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:rotate-0 focus:shadow-lg focus:shadow-amber-950/20">
     <div class="bg-{{ $ink }} flex gap-0.5 rounded-t p-1 group-hover:bg-slate-700">
         @foreach (['red', 'amber', 'lime'] as $item)
             <div class="bg-{{ $item }}-400 size-1 rounded-full"></div>

@@ -23,7 +23,7 @@
 
 <div class="-mx-1.5 flex flex-wrap">
     @foreach ($work as $title => $image)
-        <div class="w-1/2 p-2 sm:w-1/3">
+        <div class="w-full p-2 sm:w-1/2 lg:w-1/3">
             <div class="text-{{ $dim }} mb-2 text-center text-xs">{{ $title }}</div>
             <x-image-frame src="{{ asset('assets/images/' . $image) }}" />
         </div>

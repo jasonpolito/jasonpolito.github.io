@@ -1,7 +1,7 @@
 // import "./particleBackground";
 import fitty from "fitty";
 import "./wordRotator";
-import "./_tailwindColors";
+// import "./_tailwindColors";
 
 const fitties = fitty(".fitty", {
     minSize: 0,

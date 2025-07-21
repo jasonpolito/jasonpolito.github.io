@@ -33,19 +33,28 @@
                     <x-image-frame src="{{ asset('assets/images/' . $image) }}" />
                 </x-slot:trigger>
                 <x-slot:content>
-                    <x-painterly class="bg-{{ $ink }} pointer-events-none fixed inset-0 h-screen w-screen">
-                        <label for="{{ $id }}" class="pointer-events-auto pointer-cursor fill-parent"></label>
-                        <div class="bg-{{ $ink }} pointer-events-none py-16">
+                    <div class="py-16 pointer-events-none">
+                        <x-painterly class="fixed inset-0 w-screen h-screen pointer-events-none">
                             <x-container
-                                class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} outline-16 outline-{{ $inkDim }} pointer-events-none relative max-w-3xl rounded bg-gradient-to-r">
-                                <div class="pointer-events-auto">
-                                    <h3 class="font-display2 fitty">{{ $title }}</h3>
-                                    <img src="{{ asset('assets/images/' . $image) }}" class="relative z-[999]" />
-                                </div>
+                                class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} relative max-w-4xl rounded bg-gradient-to-r shadow-md">
+                                <x-card>
+                                    <div>
+                                        <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
+                                            {{ $title }}</h3>
+                                        <h3
+                                            class="relative mb-2 mt-3 block w-full rounded-md bg-current px-2 py-[0.25rem] sm:px-4">
+                                            <div class="relative left-1.5">
+                                                <div class="fitty tracking-[0.5em] text-white sm:tracking-[1em]">Waste
+                                                    to Revitalization</div>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </x-card>
+                                <img src="{{ asset('assets/images/' . $image) }}" class="relative z-[999]" />
+                                @include('_partials._texture_overlay', ['class' => ''])
                             </x-container>
-                            @include('_partials._texture_overlay', ['class' => ''])
-                        </div>
-                    </x-painterly>
+                        </x-painterly>
+                    </div>
                 </x-slot:content>
             </x-lightbox>
         </div>

@@ -53,6 +53,7 @@
                                 <img src="{{ asset('assets/images/' . $image) }}" class="relative z-[999]" />
                                 @include('_partials._texture_overlay', ['class' => ''])
                             </x-container>
+                            <div class="py-8"></div>
                         </x-painterly>
                     </div>
                 </x-slot:content>

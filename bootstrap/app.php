@@ -11,10 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->web([
-            \Fahlisaputra\Minify\Middleware\MinifyHtml::class,
-            \Fahlisaputra\Minify\Middleware\MinifyCss::class,
-            \Fahlisaputra\Minify\Middleware\MinifyJavascript::class,
+        $middleware->web(append: [
+            \App\Http\Middleware\HtmlMinifier::class,
+
+            // \Fahlisaputra\Minify\Middleware\MinifyCss::class,
+            // \Fahlisaputra\Minify\Middleware\MinifyJavascript::class,
+            // \Fahlisaputra\Minify\Middleware\MinifyHtml::class,
         ]);
         //
     })

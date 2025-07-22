@@ -37,11 +37,11 @@
                 <x-slot:content>
                     <label for="{{ $id }}"
                         onclick="document.querySelector('body').classList.remove('overflow-hidden')"
-                        class="fixed inset-0 block pointer-events-auto z-1 size-full cursor-zoom-out bg-red-800/10"></label>
+                        class="z-1 backdrop-saturate-10 pointer-events-auto fixed inset-0 block size-full cursor-zoom-out bg-red-800/10 backdrop-blur-[1.5px]"></label>
                     <div class="relative max-w-4xl mx-auto z-2">
                         <x-painterly>
                             <x-container
-                                class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} pointer-events-auto relative max-w-4xl rounded bg-gradient-to-r shadow-md">
+                                class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} pointer-events-auto relative max-w-4xl rounded bg-gradient-to-r shadow-xl">
                                 <x-card class="m-0!">
                                     <div>
                                         <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">

@@ -25,7 +25,7 @@
     </div>
 </x-card>
 
-<x-card class="sm:-mt-18 -mb-8 -mt-6 text-transparent">
+<x-card class="-mt-6 -mb-8 text-transparent sm:-mt-18">
     <div class="flex flex-wrap gap-3 text-justify uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6 sm:text-lg">
         <div class="sm:w-1/2">
             <p class="text-{{ $dim }}">
@@ -56,9 +56,10 @@
             <a href="#"
                 class="text-{{ $ink }} hover:text-{{ $accent }} focus:text-{{ $accent }} block focus:outline-none">
                 <x-card class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">
-                    <div class="-mx-6 flex items-center justify-center gap-3 text-white">
+                    <div class="flex items-center justify-center gap-3 -mx-6 text-white">
                         <h4 class="font-display2 relative top-0.5 text-xl tracking-[0.25em]">Say howdy! </h4>
-                        <div class="w-12">@include('_partials.point')</div>
+                        <div class="w-16 -my-4">@include('_partials._arrow')</div>
+                        {{-- <div class="w-12">@include('_partials.point')</div> --}}
                     </div>
                 </x-card>
             </a>

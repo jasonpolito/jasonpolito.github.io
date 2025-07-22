@@ -13,21 +13,6 @@
     <div
         class="border-3 border-{{ $ink }} bg-{{ $paper }} rounded-b group-hover:border-slate-700 group-focus:border-slate-700">
         <img src="{{ asset($src) }}" alt=""
-            class="filter-[url(#posterize1)_saturate(0)_sepia(0.06)_invert(100)] relative mix-blend-multiply group-hover:mix-blend-normal group-hover:contrast-100 group-hover:saturate-100 group-hover:sepia-0 group-focus:mix-blend-normal group-focus:contrast-100 group-focus:saturate-100 group-focus:sepia-0">
-        <svg class="fill-parent" viewBox="0 0 500 500" aria-hidden="true">
-            <filter id="posterize1" filterRes="512">
-                <feColorMatrix type="saturate" values="0.35" result="desat" />
-                <feComponentTransfer>
-                    <feFuncR type="gamma" exponent="0.8" amplitude="1.5" offset="0.1" />
-                    <feFuncG type="gamma" exponent="0.8" amplitude="1.5" offset="0.1" />
-                    <feFuncB type="gamma" exponent="0.8" amplitude="1.5" offset="0.1" />
-                </feComponentTransfer>
-                <feComponentTransfer>
-                    <feFuncR type="discrete" tableValues="0 0.25 0.5 0.75 1" />
-                    <feFuncG type="discrete" tableValues="0 0.25 0.5 0.75 1" />
-                    <feFuncB type="discrete" tableValues="0 0.25 0.5 0.75 1" />
-                </feComponentTransfer>
-            </filter>
-        </svg>
+            class="filter-[url(#posterizer)_saturate(0)_sepia(0.06)_invert(100)] relative mix-blend-multiply group-hover:mix-blend-normal group-hover:contrast-100 group-hover:saturate-100 group-hover:sepia-0 group-focus:mix-blend-normal group-focus:contrast-100 group-focus:saturate-100 group-focus:sepia-0">
     </div>
 </div>

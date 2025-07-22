@@ -2,7 +2,7 @@
     $id = uniqid('image-frame-');
 @endphp
 <div
-    class="relative block rounded shadow-sm outline-none appearance-none cursor-pointer padding-0 hover:z-1 group shadow-amber-950/10 hover:rotate-0 hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:rotate-0 focus:shadow-lg focus:shadow-amber-950/20">
+    class="relative block rounded shadow-sm outline-none appearance-none cursor-pointer padding-0 hover:z-1 group shadow-amber-950/10 hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:shadow-lg focus:shadow-amber-950/20">
     <div class="bg-{{ $ink }} flex gap-0.5 rounded-t p-1 group-hover:bg-slate-700">
         @foreach (['red', 'amber', 'lime'] as $color)
             <div

@@ -26,15 +26,15 @@
     .fill-parent {
         @apply w-full h-full inset-0 absolute;
     }
-    .nowrap-forced {
+    /* .nowrap-forced {
         white-space: nowrap !important;
         *[style] {
             white-space: nowrap !important;
         }
-    }
+    } */
 }
 
-@keyframes color-spin {
+/* @keyframes color-spin {
     0% {
         filter: hue-rotate(0deg);
     }
@@ -42,13 +42,17 @@
     100% {
         filter: hue-rotate(360deg);
     }
-}
+} */
 
 html,
 body {
     position: relative;
 }
 
+body.debug * {
+    outline: 1px dotted lime !important;
+}
+/* 
 .color-spin {
     animation: color-spin 5s linear infinite;
-}
+} */

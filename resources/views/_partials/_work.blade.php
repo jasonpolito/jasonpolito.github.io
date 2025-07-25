@@ -20,9 +20,11 @@
                 </div>
             </div>
         </h3>
+        <h3 class="fitty text-{{ $accent }} font-display2 -mb-6">
+            Headin' Your Way Soon</h3>
     </div>
 </x-card>
-
+{{-- 
 <div class="macy">
     @foreach ($work as $title => $image)
         @php
@@ -41,7 +43,7 @@
                     <label for="{{ $id }}"
                            onclick="document.querySelector('body').classList.remove('overflow-hidden')"
                            class="z-1 backdrop-saturate-10 pointer-events-auto fixed inset-0 block size-full cursor-zoom-out bg-red-800/10 backdrop-blur-[1.5px]"></label>
-                    <div class="z-2 relative mx-auto max-w-4xl">
+                    <div class="relative max-w-4xl mx-auto z-2">
                         <x-painterly>
                             <x-container
                                          class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} pointer-events-auto relative max-w-4xl rounded bg-gradient-to-r shadow-xl">
@@ -74,4 +76,4 @@
             </x-lightbox>
         </div>
     @endforeach
-</div>
+</div> --}}

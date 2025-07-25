@@ -7,7 +7,7 @@
          class="bg-{{ $ink }} flex gap-0.5 rounded-t p-1 group-hover:bg-slate-950">
         @foreach (['red', 'amber', 'lime'] as $color)
             <div
-                 class="group-hover:bg-{{ $color }}-400 group-focus:bg-{{ $color }}-400 bg-{{ $paper }} top-px size-1 rounded-full">
+                 class="group-hover:bg-{{ $color }}-400 group-focus:bg-{{ $color }}-400 bg-{{ $paper }} relative top-px size-1 rounded-full">
             </div>
         @endforeach
     </div>

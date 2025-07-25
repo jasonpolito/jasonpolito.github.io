@@ -10,8 +10,10 @@
 
 <x-card>
     <div>
+        {{-- <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
+            Fresh Off The Trail</h3> --}}
         <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
-            Fresh Off The Trail</h3>
+            On The Horizon</h3>
         <h3
             class="relative my-3 block w-full rounded-md bg-current px-2 py-[0.25rem] sm:px-4">
             <div class="relative left-1 sm:left-[1rem]">
@@ -20,8 +22,8 @@
                 </div>
             </div>
         </h3>
-        <h3 class="fitty text-{{ $accent }} font-display2 -mb-6">
-            Headin' Your Way Soon</h3>
+        {{-- <h3 class="fitty text-{{ $accent }} font-display2 -mb-6">
+            Headin' Your Way Soon</h3> --}}
     </div>
 </x-card>
 {{-- 

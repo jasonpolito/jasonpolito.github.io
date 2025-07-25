@@ -14,6 +14,7 @@ import "./painterly";
 setInterval(() => {
     fitties.forEach((fittyInstance) => {
         fittyInstance.fit();
+        console.log("fitting instances...");
     });
 }, 500);
 

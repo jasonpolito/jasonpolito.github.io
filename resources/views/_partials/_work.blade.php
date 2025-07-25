@@ -16,7 +16,7 @@
             On The Horizon</h3>
         <h3
             class="relative my-3 block w-full rounded-md bg-current px-2 py-[0.25rem] sm:px-4">
-            <div class="relative left-1 sm:left-[1rem]">
+            <div class="relative left-1 sm:left-[0.25em]">
                 <div class="fitty tracking-[0.5em] text-white sm:tracking-[1em]">
                     Bits From the Workshop
                 </div>

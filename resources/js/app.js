@@ -16,7 +16,7 @@ setInterval(() => {
         fittyInstance.fit();
         console.log("fitting instances...");
     });
-}, 500);
+}, 2000);
 
 // document.querySelectorAll(".macy").forEach((el) => {
 //     const macyInstance = Macy({

@@ -70,11 +70,46 @@
             <p
                class="text-{{ $dim }}">
                 @highlightWords($highlightedWords)
-                    what are ya waitin' for, compadre? Giddyup!
+                    What are ya waitin' for, compadre? Giddyup!
                 @endHighlightWords
             </p>
+            @php
+                $content = <<<EOD
+                🔍 Project Overview
+                Brief description of your business/organization
 
-            <a href="#"
+                Purpose of the site (e.g., portfolio, e-commerce, informational, app landing page)
+
+                🎯 Key Goals & Features
+                Pages you'd like (e.g., Home, About, Services, Contact)
+
+                Any specific features? (e.g., contact forms, blog, booking system, online payments, user login)
+
+                CMS preference (e.g., WordPress, Webflow, custom build, no preference)
+
+                🖼 Design
+                Do you already have designs/mockups?
+
+                If not, do you need design services too?
+
+                Any reference sites you like in terms of look, feel, or functionality?
+
+                ⚙️ Functionality
+                Will the site need mobile responsiveness?
+
+                Any integrations needed? (e.g., CRM, newsletter signup, third-party APIs)
+
+                🗂 Content
+                Will you be providing the text/images, or would you like help with that?
+
+                🚀 Timeline
+                Do you have a deadline or ideal launch date?
+
+                💰 Budget
+                An idea of your budget range would help me tailor the quote appropriately
+                EOD;
+            @endphp
+            <a href="mailto:jasonpolito@gmail.com?subject=Howdy%20Partner!%20Let's%20spin%20a%20yarn%20together!&body={{ rawurlencode($content) }}"
                class="text-{{ $ink }} hover:text-{{ $accent }} focus:text-{{ $accent }} block focus:outline-none">
                 <x-card
                         class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">

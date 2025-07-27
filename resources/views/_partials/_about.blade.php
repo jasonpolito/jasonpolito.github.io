@@ -23,19 +23,19 @@
         class="py-0! m-0! text-transparent">
     <div>
         <h3
-            class="fitty font-display2 text-{{ $accent }}">
+            class="fitty font-display2 text-red-800">
             Let's spin a yarn together
         </h3>
     </div>
 </x-card>
 
 <x-card
-        class="-mt-6 -mb-8 text-transparent sm:-mt-18">
+        class="sm:-mt-18 -mb-8 -mt-6 text-transparent">
     <div
          class="flex flex-wrap gap-3 text-justify uppercase leading-[1.8rem] sm:flex-nowrap sm:gap-6 sm:text-lg">
         <div class="sm:w-1/2">
             <p
-               class="text-{{ $dim }}">
+               class="text-orange-950">
                 @highlightWords($highlightedWords)
                     Saddle up partner and
                     let me tell you a tale.
@@ -59,7 +59,7 @@
         <div class="sm:w-1/2">
 
             <p
-               class="text-{{ $dim }} mb-3">
+               class="mb-3 text-orange-950">
                 @highlightWords($highlightedWords)
                     From branding logos, to animating camp fires and stirring up
                     servers more sturdy than a saloon safe! Whether it's pixels or
@@ -68,7 +68,7 @@
             </p>
 
             <p
-               class="text-{{ $dim }}">
+               class="text-orange-950">
                 @highlightWords($highlightedWords)
                     What are ya waitin' for, compadre? Giddyup!
                 @endHighlightWords
@@ -110,17 +110,17 @@
                 EOD;
             @endphp
             <a href="mailto:jasonpolito@gmail.com?subject=Howdy%20Partner!%20Let's%20spin%20a%20yarn%20together!&body={{ rawurlencode($content) }}"
-               class="text-{{ $ink }} hover:text-{{ $accent }} focus:text-{{ $accent }} block focus:outline-none">
+               class="block text-slate-950 hover:text-red-800 focus:text-red-800 focus:outline-none">
                 <x-card
                         class="p-0! relative bg-current text-xs uppercase tracking-widest text-current">
                     <div
-                         class="flex items-center justify-center gap-3 -mx-6 text-white">
+                         class="-mx-6 flex items-center justify-center gap-3 text-white">
                         <h4
                             class="font-display2 relative top-0.5 text-xl tracking-[0.25em]">
                             Say howdy!
                         </h4>
                         <div
-                             class="w-16 -my-4">
+                             class="-my-4 w-16">
                             @include('_partials._arrow')
                         </div>
                     </div>

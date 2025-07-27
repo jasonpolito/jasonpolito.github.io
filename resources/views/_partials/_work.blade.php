@@ -10,9 +10,9 @@
 
 <x-card>
     <div>
-        {{-- <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
+        {{-- <h3 class="fitty text-red-800 font-display2 -mb-4 -mt-2">
             Fresh Off The Trail</h3> --}}
-        <h3 class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
+        <h3 class="fitty font-display2 -mb-4 -mt-2 text-red-800">
             On The Horizon</h3>
         <h3
             class="relative my-3 block w-full rounded-md bg-current px-2 py-[0.25rem] sm:px-4">
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </h3>
-        {{-- <h3 class="fitty text-{{ $accent }} font-display2 -mb-6">
+        {{-- <h3 class="fitty text-red-800 font-display2 -mb-6">
             Headin' Your Way Soon</h3> --}}
     </div>
 </x-card>
@@ -48,11 +48,11 @@
                     <div class="relative max-w-4xl mx-auto z-2">
                         <x-painterly>
                             <x-container
-                                         class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} pointer-events-auto relative max-w-4xl rounded bg-gradient-to-r shadow-xl">
+                                         class="text-slate-950 from-{{ $paperDim }} via-orange-100 to-{{ $paperDim }} pointer-events-auto relative max-w-4xl rounded bg-gradient-to-r shadow-xl">
                                 <x-card class="m-0!">
                                     <div>
                                         <h3
-                                            class="fitty text-{{ $accent }} font-display2 -mb-4 -mt-2">
+                                            class="fitty text-red-800 font-display2 -mb-4 -mt-2">
                                             {{ $title }}</h3>
                                         <h3
                                             class="relative mb-2 mt-3 block w-full rounded-md bg-current px-2 py-[0.25rem] sm:px-4">

@@ -5,11 +5,11 @@
 
 @section('content')
     <x-container
-                 class="text-{{ $ink }} from-{{ $paperDim }} via-{{ $paper }} to-{{ $paperDim }} outline-16 outline-{{ $inkDim }} relative max-w-3xl rounded bg-gradient-to-r">
+                 class="outline-16 relative max-w-3xl rounded bg-gradient-to-r from-orange-300 via-orange-100 to-orange-300 text-slate-950 outline-slate-800">
         @include('_partials.intro')
 
         <x-card class="text-transparent">
-            <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
+            <div class="-mt-6 text-orange-950 sm:-mt-8 lg:-mt-12">
                 <h4 class="fitty nowrap-forced tracking-widest"><span
                           class="relative -top-1 text-[0.6em]">✦</span> Over a
                     Decade of Experience <span
@@ -27,7 +27,7 @@
         </div>
 
         <x-card class="text-transparent">
-            <div class="text-{{ $dim }} -mt-6 sm:-mt-8 lg:-mt-12">
+            <div class="-mt-6 text-orange-950 sm:-mt-8 lg:-mt-12">
                 <h4 class="fitty nowrap-forced tracking-widest"><span
                           class="relative -top-1 text-[0.6em]">✦</span>
                     Done Pertin' Near Everything <span
@@ -36,14 +36,14 @@
         </x-card>
 
         <div class="lg:-mt-15 -mt-6 sm:-mt-9">
-            <x-card class="text-{{ $ink }} bg-current">
+            <x-card class="bg-current text-slate-950">
                 <div class="text-white">@include('_partials._skills')</div>
             </x-card>
         </div>
 
         @include('_partials._about')
 
-        <div class="text-{{ $dim }} my-12 flex justify-center gap-3">
+        <div class="my-12 flex justify-center gap-3 text-orange-950">
             @for ($i = 0; $i < 3; $i++)
                 <div>✦</div>
             @endfor
@@ -51,7 +51,7 @@
 
         @include('_partials._work')
 
-        <div class="text-{{ $dim }} my-12 flex justify-center gap-3">
+        <div class="my-12 flex justify-center gap-3 text-orange-950">
             @for ($i = 0; $i < 3; $i++)
                 <div>✦</div>
             @endfor

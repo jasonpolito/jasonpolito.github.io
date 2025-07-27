@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->web(append: [
-            \App\Http\Middleware\HtmlMinifier::class,
+            // \App\Http\Middleware\HtmlMinifier::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

@@ -60,5 +60,4 @@
         @include('_partials._corner_stars')
 
     </x-container>
-    <a href="{{ route('tracker') }}">test</a>
 @endsection

@@ -43,7 +43,7 @@
 
         @include('_partials._about')
 
-        <div class="my-12 flex justify-center gap-3 text-orange-950">
+        <div class="my-12 flex select-none justify-center gap-3 text-orange-950">
             @for ($i = 0; $i < 3; $i++)
                 <div>✦</div>
             @endfor
@@ -51,7 +51,7 @@
 
         @include('_partials._work')
 
-        <div class="my-12 flex justify-center gap-3 text-orange-950">
+        <div class="my-12 flex select-none justify-center gap-3 text-orange-950">
             @for ($i = 0; $i < 3; $i++)
                 <div>✦</div>
             @endfor

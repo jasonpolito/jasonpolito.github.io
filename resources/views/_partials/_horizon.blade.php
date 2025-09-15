@@ -1,5 +1,6 @@
 <div class="absolute bottom-0 left-0 h-1/2 w-full text-slate-950">
     <div class="relative mx-auto h-full max-w-[1480px]">
+        <div class="-translate-1/2 absolute left-1/2 top-full h-64 w-64 rounded-full bg-amber-300"></div>
         <div class="absolute bottom-[-100px] left-0 w-full text-amber-700">
             @include('_partials.svg.bluffs._bluffbg')</div>
         <div class="absolute bottom-[-20px] left-[-5%] w-[600px] text-red-700">@include('_partials.svg.bluffs._bluff2')</div>

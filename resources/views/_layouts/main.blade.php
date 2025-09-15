@@ -18,7 +18,7 @@
     ob_start('sanitize_output');
 @endphp
 <!DOCTYPE html>
-<html lang="en" style="background: var(--color-slate-800)">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -35,15 +35,10 @@
 </head>
 
 <body
-    class="relative antialiased uppercase font-display min-h-dvh text-pretty bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 selection:bg-red-800 selection:text-white">
-    <x-painterly class="relative block min-h-dvh">
-        <div class="lg:py-16">
-            @yield('content')
-            @include('_partials._texture_overlay')
-        </div>
-        <div class="py-8 text-xs text-center text-white sm:-mt-6 lg:-mt-12">&copy; {{ date('Y') }} – Jason Polito
-        </div>
-    </x-painterly>
+      class="text-pretty bg-slate-950 text-white antialiased selection:bg-red-800 selection:text-white">
+    @yield('content')
+    <div class="pt-16 text-center text-xs">&copy; {{ date('Y') }} – Jason
+        Polito</div>
     @stack('scripts')
     @stack('lightboxes')
     @stack('htmlClose')

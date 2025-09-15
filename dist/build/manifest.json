@@ -1,12 +1,32 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-mLk5x-le.css",
+    "file": "assets/app-0BBmi_eP.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/fonts/caprasimo-v6-latin-regular.woff2": {
     "file": "assets/caprasimo-v6-latin-regular-u3avbpQ7.woff2",
     "src": "resources/fonts/caprasimo-v6-latin-regular.woff2"
+  },
+  "resources/fonts/inter-tight-v8-latin-regular.woff2": {
+    "file": "assets/inter-tight-v8-latin-regular-iW8qmuJY.woff2",
+    "src": "resources/fonts/inter-tight-v8-latin-regular.woff2"
+  },
+  "resources/fonts/inter-v20-latin-900.woff2": {
+    "file": "assets/inter-v20-latin-900-D4nM5aha.woff2",
+    "src": "resources/fonts/inter-v20-latin-900.woff2"
+  },
+  "resources/fonts/inter-v20-latin-900italic.woff2": {
+    "file": "assets/inter-v20-latin-900italic-CJWw2qbV.woff2",
+    "src": "resources/fonts/inter-v20-latin-900italic.woff2"
+  },
+  "resources/fonts/inter-v20-latin-italic.woff2": {
+    "file": "assets/inter-v20-latin-italic-D1l0FflY.woff2",
+    "src": "resources/fonts/inter-v20-latin-italic.woff2"
+  },
+  "resources/fonts/inter-v20-latin-regular.woff2": {
+    "file": "assets/inter-v20-latin-regular-C38fXH4l.woff2",
+    "src": "resources/fonts/inter-v20-latin-regular.woff2"
   },
   "resources/fonts/sancreek-v26-latin-regular.woff2": {
     "file": "assets/sancreek-v26-latin-regular-BavC9fA5.woff2",

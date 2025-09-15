@@ -4,7 +4,7 @@
             <filter data-displacement-map id="{{ $id }}">
                 <feTurbulence type="turbulence" baseFrequency="0.017" numOctaves="2" seed="1" result="noise" />
                 <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.25" xChannelSelector="R"
-                    yChannelSelector="G" />
+                                   yChannelSelector="G" />
             </filter>
         </defs>
     </svg>

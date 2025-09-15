@@ -7,7 +7,7 @@
                      @include('_partials._stars')
                      @include('_partials._sunrise')
                  </div>
-                 <div class="2xl:py-30 lg:py-16">
+                 <div class="xl:py-30 lg:py-16">
                      <x-container
                                   class="outline-16 relative max-w-3xl rounded bg-gradient-to-r from-orange-300 via-orange-100 to-orange-300 text-slate-950 outline-slate-950">
                          @include('_partials.intro')
@@ -48,7 +48,7 @@
              <div class="relative bg-red-950">
                  <x-container
                               class="relative max-w-3xl">
-                     <div class="lg:max-w-auto mx-auto py-4 sm:max-w-4xl sm:py-8 lg:py-0">
+                     <div class="lg:max-w-auto z-12 mx-auto py-4 sm:max-w-4xl sm:py-8 lg:py-0">
                          <div class="flex items-center gap-4 text-orange-100">
                              <div
                                   class="w-20 rotate-90">

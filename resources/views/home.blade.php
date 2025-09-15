@@ -5,4 +5,5 @@
 
 @section('content')
     @include('_partials._masthead')
+    @include('_partials._portfolio')
 @endsection

@@ -49,7 +49,23 @@
                     </x-container>
                 </div>
             </div>
-            <div class="relative bg-red-950 py-16"></div>
+            <div class="relative bg-red-950">
+                <x-container
+                             class="relative max-w-3xl">
+                    <div class="lg:max-w-auto mx-auto py-4 sm:max-w-md sm:py-8 lg:py-0">
+                        <h3 class="fitty font-display2 -mb-4 -mt-2 text-orange-100">
+                            Come on, take a gander!</h3>
+                        {{-- <div class="mx-auto flex w-[150px] justify-center pt-8 text-orange-200">
+                            @for ($i = 0; $i < 3; $i++)
+                                <div
+                                     class="-mx-4 rotate-90">
+                                    @include('_partials._arrow')
+                                </div>
+                            @endfor
+                        </div> --}}
+                    </div>
+                </x-container>
+            </div>
             @include('_partials._texture_overlay')
         </x-painterly>
     </div>

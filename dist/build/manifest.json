@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-bFr4cdSE.css",
+    "file": "assets/app-pdIl-U2s.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -33,7 +33,7 @@
     "src": "resources/fonts/sancreek-v26-latin-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CHchWD0o.js",
+    "file": "assets/app-BcpiytVI.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

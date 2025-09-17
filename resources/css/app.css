@@ -51,3 +51,16 @@ body {
 body.debug * {
     outline: 1px dotted lime !important;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.image-frame img {
+    animation: scroll 45s linear alternate infinite;
+}

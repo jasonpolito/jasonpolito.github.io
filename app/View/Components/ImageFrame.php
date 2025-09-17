@@ -9,13 +9,15 @@ use Illuminate\View\Component;
 class ImageFrame extends Component
 {
     public string $src;
+    public string $url;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(string $src)
+    public function __construct($src, $url)
     {
         $this->src = $src;
+        $this->url = $url;
     }
 
     /**

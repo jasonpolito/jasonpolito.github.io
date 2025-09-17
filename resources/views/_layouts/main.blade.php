@@ -18,7 +18,7 @@
     ob_start('sanitize_output');
 @endphp
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: black">
 
 <head>
     <meta charset="UTF-8">

@@ -14,14 +14,20 @@
             </div>
         @endforeach
     </div>
+    <div class="bg-slate-700 p-2">
+        <div class="flex items-center gap-1 rounded-full bg-slate-600 px-2 py-1 text-[0.6em] text-slate-300">
+            <x-heroicon-o-lock-closed class="relative top-[-1px] h-2.5 w-2.5 text-slate-400" />
+            {{ $url ?? 'https://jasonpolito.github.io' }}
+        </div>
+    </div>
     <div
          class="border-3 rounded-b border-slate-800">
-        <div class="relative">
-            <div class="h-[400px] bg-slate-600"></div>
-            {{-- <img src="{{ asset($src) }}" alt=""
-                 class="filter-[url(#posterizer)_saturate(0)_sepia(0.06)_invert(100)] mix-blend-multiply">
-            <img src="{{ asset($src) }}" alt=""
-                 class="z-1 fill-parent pointer-events-none relative opacity-0 transition duration-700 group-hover:opacity-100"> --}}
+        <div class="image-frame relative max-h-[600px] overflow-hidden">
+            @if ($src)
+                <img src="{{ asset('assets/images/' . $src) }}" alt="{{ $src }}" />
+            @else
+                <div class="h-[400px] bg-slate-600"></div>
+            @endif
         </div>
     </div>
 </div>

@@ -7,9 +7,22 @@
              class="absolute right-0 z-10 h-1/3 w-1/2 bg-gradient-to-bl from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
         </div>
         @for ($i = 0; $i < 100; $i++)
+            @php
+                $top = rand(0, 90);
+                $left = rand(0, 100);
+                $scale = mt_rand(5, 10) / 10;
+            @endphp
             <div
-                 style="top: {{ rand(0, 90) }}%; left: {{ rand(0, 100) }}%; transform: scale({{ mt_rand(5, 10) / 10 }})"
+                 style="top: {{ $top }}%; left: {{ $left }}%; transform: scale({{ $scale }})"
                  class="leading-2 text-white-950 {{ rand(0, 1) ? 'text-sky-200' : '' }} {{ rand(0, 10) > 7 ? 'opacity-50' : '' }} absolute select-none p-2">
                 ✦</div>
+            @if (rand(0, 100) > 95)
+                @for ($j = 0; $j < 2; $j++)
+                    <div
+                         style="top: {{ $top }}%; left: {{ $left }}%; transform: scale({{ $j ? '0.2, 6' : '6, 0.2' }})"
+                         class="leading-2 text-white-950 {{ rand(0, 1) ? 'text-sky-200' : '' }} {{ rand(0, 10) > 7 ? 'opacity-50' : '' }} absolute select-none p-2">
+                        ✦</div>
+                @endfor
+            @endif
         @endfor
     </div>

@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class ProjectCard extends Component
 {
-    public array $project;
+    public $project;
 
     /**
      * Create a new component instance.

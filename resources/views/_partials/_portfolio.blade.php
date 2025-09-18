@@ -7,6 +7,7 @@
             'url' => 'https://halifaxhealth.org',
             'color' => 'text-sky-500',
             'image' => 'halifaxhealth2.jpg',
+            'image_phone' => 'halifaxhealth_iphone.jpg',
             // 'description' =>
             //     'Client was previously using WordPress but, with the large dataset and inter-relations of record types, needed a solution that fit their needs exactly. I was responsible for discovering, developing, and maintaining their new CMS and ground-up redesign of the public facing site.',
             // 'metrics' => [
@@ -42,12 +43,12 @@
 @endphp
 
 <div class="bg-black">
-    <div
+    {{-- <div
          class="pointer-events-none absolute z-10 h-1/3 w-1/2 bg-gradient-to-br from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
     </div>
     <div
          class="pointer-events-none absolute right-0 z-10 h-1/3 w-1/2 bg-gradient-to-bl from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
-    </div>
+    </div> --}}
     @foreach ($projects as $project)
         <x-project-card :$project />
     @endforeach

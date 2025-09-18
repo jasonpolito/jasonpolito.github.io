@@ -1,12 +1,15 @@
 @php
     extract($project);
 @endphp
-<x-container class="relative">
-    <div class="-mx-8 flex items-center py-[calc(min(20vh,8rem))] normal-case text-orange-100">
+<x-container>
+    <div class="-mx-8 flex items-center py-[calc(min(20vh,8rem))] text-orange-100">
         <div class="w-1/2 px-8">
-            <h3 class="mb-6 text-2xl font-medium leading-relaxed">{{ $subtitle }}</h3>
+            <div>
+                <h3 class="fitty font-display2 mb-6 text-2xl font-medium leading-relaxed text-white">{{ $subtitle }}
+                </h3>
+            </div>
             {{-- <h3 class="mb-6 text-2xl font-medium leading-relaxed">{{ $title }}</h3> --}}
-            <p class="mb-8 font-sans normal-case leading-relaxed">
+            <p class="mb-8 text-justify leading-relaxed">
                 {{ $description ?? fake()->paragraph() }}
             </p>
             <div class="flex justify-between">
@@ -30,7 +33,7 @@
                     @for ($i = 0; $i < 2; $i++)
                         <div class="w-1/2">
                             <div class="flex items-end gap-3">
-                                <h4 class="text-7xl text-red-600">{{ rand(20, 80) }}</h4>
+                                <h4 class="font-display2 text-7xl text-white">{{ rand(20, 80) }}</h4>
                                 <div class="relative -top-2 font-sans text-sm font-black uppercase tracking-widest">
                                     {{ fake()->sentence(rand(1, 2)) }}</div>
                             </div>
@@ -40,7 +43,8 @@
             </div>
         </div>
         <div class="w-1/2 px-8">
-            <x-image-frame url="{{ $url ?? null }}" src="{{ $image ?? null }}" />
+            <x-desktop-frame url="{{ $url ?? '' }}" src="{{ $image ?? null }}" />
+            <x-phone-frame url="{{ $url ?? '' }}" src="{{ $image_phone ?? null }}" />
         </div>
     </div>
 </x-container>

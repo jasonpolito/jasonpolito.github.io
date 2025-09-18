@@ -16,7 +16,7 @@
                  style="top: {{ $top }}%; left: {{ $left }}%; transform: scale({{ $scale }})"
                  class="leading-2 text-white-950 {{ rand(0, 1) ? 'text-sky-200' : '' }} {{ rand(0, 10) > 7 ? 'opacity-50' : '' }} absolute select-none p-2">
                 ✦</div>
-            @if (rand(0, 100) > 95)
+            @if (rand(0, 100) > 90)
                 @for ($j = 0; $j < 2; $j++)
                     <div
                          style="top: {{ $top }}%; left: {{ $left }}%; transform: scale({{ $j ? '0.2, 6' : '6, 0.2' }})"

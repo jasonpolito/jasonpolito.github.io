@@ -70,7 +70,7 @@
                         </div>
                     </x-container>
                 </div>
-                @include('_partials._portfolio')
+                {{-- @include('_partials._portfolio') --}}
                 @include('_partials._texture_overlay')
             </div>
         </x-painterly>

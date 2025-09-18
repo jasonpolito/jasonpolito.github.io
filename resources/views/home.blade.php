@@ -5,5 +5,5 @@
 
 @section('content')
     @include('_partials._masthead')
-    @include('_partials._portfolio')
+    {{-- @include('_partials._portfolio') --}}
 @endsection

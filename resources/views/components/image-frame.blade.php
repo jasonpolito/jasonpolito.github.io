@@ -2,7 +2,7 @@
     $id = uniqid('image-frame-');
 @endphp
 <div
-     class="padding-0 group relative block rounded bg-slate-800 shadow-sm shadow-amber-950/10 outline-none hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:shadow-lg focus:shadow-amber-950/20">
+     class="padding-0 group relative block rounded bg-slate-800 font-sans shadow-sm shadow-amber-950/10 outline-none hover:shadow-lg hover:shadow-amber-950/20 focus:z-10 focus:shadow-lg focus:shadow-amber-950/20">
     <div
          class="bg-amber-400 bg-lime-400 bg-red-400">
     </div>

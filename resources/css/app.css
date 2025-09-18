@@ -62,6 +62,6 @@ body.debug * {
 }
 
 .image-frame img {
-    animation: scroll 45s linear alternate infinite;
-    animation-timing-function: steps(25);
+    /* animation: scroll 45s linear alternate infinite;
+    animation-timing-function: steps(25); */
 }

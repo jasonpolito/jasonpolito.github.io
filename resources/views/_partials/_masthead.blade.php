@@ -70,14 +70,10 @@
                         </div>
                     </x-container>
                 </div>
-                <div class="{{ $fadeHeight }} bg-red-950">
-                </div>
+                @include('_partials._portfolio')
                 @include('_partials._texture_overlay')
             </div>
         </x-painterly>
-        <div
-             class="{{ $fadeHeight }} absolute bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-slate-950">
-        </div>
     </div>
 </div>
 </div>

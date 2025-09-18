@@ -2,7 +2,7 @@
     $projects = [
         [
             'subtitle' => 'Halifax Health',
-            'title' =>
+            'description' =>
                 'Built and maintained a bespoke content management system for Halifax Health, a large hospital chain in central Florida.',
             'url' => 'https://halifaxhealth.org',
             'color' => 'text-sky-500',
@@ -41,6 +41,15 @@
     ];
 @endphp
 
-@foreach ($projects as $project)
-    <x-project-card :$project />
-@endforeach
+<div class="bg-black">
+
+    <div
+         class="absolute z-10 h-1/3 w-1/2 bg-gradient-to-br from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
+    </div>
+    <div
+         class="absolute right-0 z-10 h-1/3 w-1/2 bg-gradient-to-bl from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
+    </div>
+    @foreach ($projects as $project)
+        <x-project-card :$project />
+    @endforeach
+</div>

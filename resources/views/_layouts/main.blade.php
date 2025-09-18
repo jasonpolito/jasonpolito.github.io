@@ -35,7 +35,8 @@
 </head>
 
 <body
-      class="text-pretty bg-slate-950 text-white antialiased selection:bg-red-800 selection:text-white">
+      class="text-pretty bg-slate-950 text-white antialiased selection:bg-red-800 selection:text-white"
+      style="transform: translate3d(0,0,1px); will-change: transform">
     @yield('content')
     <div class="pt-16 text-center text-xs">&copy; {{ date('Y') }} – Jason
         Polito</div>

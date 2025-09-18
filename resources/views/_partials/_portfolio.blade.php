@@ -42,13 +42,13 @@
     ];
 @endphp
 
-<div class="bg-black">
-    {{-- <div
-         class="pointer-events-none absolute z-10 h-1/3 w-1/2 bg-gradient-to-br from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
+<div class="relative py-32 bg-red-950">
+    <div
+         class="absolute top-0 z-10 w-1/2 pointer-events-none h-1/3 bg-gradient-to-br from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
     </div>
     <div
-         class="pointer-events-none absolute right-0 z-10 h-1/3 w-1/2 bg-gradient-to-bl from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
-    </div> --}}
+         class="absolute top-0 right-0 z-10 w-1/2 pointer-events-none h-1/3 bg-gradient-to-bl from-black via-transparent to-transparent opacity-80 mix-blend-overlay">
+    </div>
     @foreach ($projects as $project)
         <x-project-card :$project />
     @endforeach

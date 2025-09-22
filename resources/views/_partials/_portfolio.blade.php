@@ -1,36 +1,18 @@
 @php
     $projects = [
         [
-            'subtitle' => 'Halifax Health',
+            'subtitle' => 'Hospital Chain Rebuild',
             'description' =>
                 'Built and maintained a bespoke content management system for Halifax Health, a large hospital chain in central Florida.',
             'url' => 'https://halifaxhealth.org',
             'color' => 'text-sky-500',
             'image' => 'halifaxhealth2.jpg',
             'image_phone' => 'halifaxhealth_iphone.jpg',
-            // 'description' =>
-            //     'Client was previously using WordPress but, with the large dataset and inter-relations of record types, needed a solution that fit their needs exactly. I was responsible for discovering, developing, and maintaining their new CMS and ground-up redesign of the public facing site.',
-            // 'metrics' => [
-            //     [
-            //         'value' => '84%',
-            //         'icon' => [
-            //             'name' => 'o-arrow-long-up',
-            //             // 'class' => 'text-sky-600',
-            //         ],
-            //         'description' => 'PageSpeed Increase',
-            //     ],
-            // ],
         ],
         [
-            'subtitle' => 'Eagle Warranty',
+            'subtitle' => 'Warranty Management System',
             'title' => 'Eagle Warranty',
             'color' => 'text-amber-500',
-            'image' => null,
-        ],
-        [
-            'subtitle' => 'Pending',
-            'title' => 'Pending',
-            'color' => 'text-lime-500',
             'image' => null,
         ],
         [

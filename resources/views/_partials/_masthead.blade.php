@@ -23,14 +23,7 @@
                                               class="relative -top-1 text-[0.6em]">✦</span></h4>
                                 </div>
                             </x-card>
-                            <div
-                                 class="relative mx-auto -mt-2 mb-6 w-3/5 sm:-mt-4 sm:mb-8 sm:w-2/5 lg:-mt-10">
-                                <div class="fill-parent left-16! scale-[0.9] text-cyan-950">
-                                    @include('_partials.horse1')</div>
-                                <div class="fill-parent -left-16! scale-[0.9] text-red-800">
-                                    @include('_partials.horse1')</div>
-                                <div class="relative">@include('_partials.horse1')</div>
-                            </div>
+                            @include('_partials._horse_chromatic')
                             <x-card class="text-transparent">
                                 <div class="-mt-6 text-orange-950 sm:-mt-8 lg:-mt-12">
                                     <h4 class="fitty nowrap-forced tracking-widest"><span
@@ -49,8 +42,8 @@
                         </x-container>
                     </div>
                 </div>
-                {{-- @include('_partials._portfolio_intro') --}}
-                @include('_partials._portfolio')
+                @include('_partials._portfolio_intro')
+                {{-- @include('_partials._portfolio') --}}
                 @include('_partials._texture_overlay')
             </div>
         </x-painterly>

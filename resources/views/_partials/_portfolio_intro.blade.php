@@ -9,7 +9,7 @@
                 </div>
                 <div class="w-full">
                     <h3 class="fitty font-display2 -mb-4 -mt-2">
-                        Come on now, take a gander!</h3>
+                        Porfolio just over the horizon!</h3>
                 </div>
                 <div
                      class="w-20 rotate-90">
